@@ -1,18 +1,20 @@
-const express = require('express');
-const parser = require('body-parser');
-const path = require('path');
-// const routes = require('./routes.js');
+const db = require('../database/model.js');
 
-const PORT = 3000;
+const getRecommendedShoes = require('../database/model.js').getRecommendedShoes;
+ 
 
-const app = express();
+module.exports = {
+  get: (req, res) => {
+    console.log('IN GET');
 
-app.use(parser.json());
+    const {category} = req.query;
 
-app.use(parser.urlencoded({extended: true}));
-
-app.use(express.static(path.resolve(__dirname, '../client/dist')));
-
-// app.use('/api', routes);
-
-app.listen(PORT, () => console.log('App is listening on PORT', PORT));
+    getRecommendedShoes(category)
+      .then(shoes => {
+        res.status(200).send(shoes)
+      })
+      .catch(err => {
+        res.status(404).send('Error getting recommended shoes', err)
+      });
+  }
+};

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Img = styled.img`
-  margin: 10px 10px 10px 10px;
+  margin: 10px;
   height: 370px;
   width: 390px;
   `;
