@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./server/index.js",
-    "build": "webpack --watch"
+    "build": "webpack --watch",
+    "seed": "./database/model.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "babel-loader": "^8.0.5",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "mongoose": "^5.4.10",
     "nodemon": "^1.18.9",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
