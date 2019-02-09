@@ -5,13 +5,12 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   width: 100%;
-  overflow: hidden;
 `;
 
 const Ul = styled.div`
   list-style-type: none;
   display: flex;
-  margin: 0 0 20px 20px;
+  margin: 0px 0px;
   transition: ${(props) => props.sliding ? 'none' : 'transform 1s ease'};
   transform: ${(props) => {
     if (!props.sliding) {
@@ -22,6 +21,52 @@ const Ul = styled.div`
     }
     return 'translateX(0%)';
   }}
+`;
+
+const ButtonLeft = styled.button`
+  background-color: rgba(232, 232, 232, 0.9);
+  transition: background-color 0.5s ease-in-out;
+  border: black;
+  color: rgb(109, 109, 109);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 17px 10px 17px;
+  font-size: 16px;
+  border-radius: 50%;
+  position: absolute;
+  left: 100px;
+  top: 150px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  } 
+
+      -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+
+`;
+
+const ButtonRight = styled.button`
+  background-color: rgba(232, 232, 232, 0.9);
+  transition: background-color 0.5s ease-in-out;
+  border: black;
+  color: rgb(109, 109, 109);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 17px 10px 17px;
+  font-size: 16px;
+  border-radius: 50%;
+  position: absolute;
+  right: 100px;
+  top: 150px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  } 
 `;
 
 class Carousel extends Component {
@@ -123,8 +168,8 @@ class Carousel extends Component {
           })
           }
         </Ul>
-        <button onClick={ () => this.prevSlide() }>Prev</button>
-        <button onClick={ () => this.nextSlide() }>Next</button>
+        <ButtonRight onClick={ () => this.prevSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonRight>
+        <ButtonLeft onClick={ () => this.nextSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonLeft>
       </Wrapper>
     );
   }
