@@ -17,6 +17,9 @@ const Ul = styled.div`
     if (!props.sliding) {
       return 'translateX(calc(-80% - 20px))';
     }
+    if (props.direction === 'prev') {
+      return 'translateX(calc(2 * (-80% - 20px)))';
+    }
     return 'translateX(0%)';
   }}
 `;
@@ -28,10 +31,12 @@ class Carousel extends Component {
       recommendations: [],
       category: 'men_athletic',
       position: 0,
+      direction: 'next',
       sliding: false
     };
     this.getOrder = this.getOrder.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
+    this.prevSlide = this.prevSlide.bind(this);
     this.doSliding = this.doSliding.bind(this);
     this.getRandomColor = this.getRandomColor.bind(this);
     this.getRecommendations = this.getRecommendations.bind(this);
@@ -55,16 +60,21 @@ class Carousel extends Component {
   nextSlide() {
     const { position, recommendations } = this.state;
     const numItems = recommendations.length || 1;
-    this.doSliding(position);
+    this.doSliding('next', position === numItems - 1 ? 0 : position + 1);
     // if positon is greater than number of items, will loop back to first position, otherwise, will increase position by 1
-    this.setState({
-      position: position === numItems - 1 ? 0 : position + 1 
-    });
   }
 
-  doSliding(position) {
+  prevSlide() {
+    const { position, recommendations } = this.state;
+    const numItems = recommendations.length || 1;
+    this.doSliding('prev', position === 0 ? numItems - 1 : position - 1);
+  }
+
+
+  doSliding(direction, position) {
     this.setState({
       sliding: true,
+      direction,
       position
     });
     setTimeout(() => {
@@ -113,6 +123,7 @@ class Carousel extends Component {
           })
           }
         </Ul>
+        <button onClick={ () => this.prevSlide() }>Prev</button>
         <button onClick={ () => this.nextSlide() }>Next</button>
       </Wrapper>
     );
