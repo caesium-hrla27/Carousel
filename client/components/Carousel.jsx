@@ -12,6 +12,13 @@ const Ul = styled.div`
   list-style-type: none;
   display: flex;
   margin: 0 0 20px 20px;
+  transition: ${(props) => props.sliding ? 'none' : 'transform 1s ease'};
+  transform: ${(props) => {
+    if (!props.sliding) {
+      return 'translateX(calc(-80% - 20px))';
+    }
+    return 'translateX(0%)';
+  }}
 `;
 
 class Carousel extends Component {
@@ -20,10 +27,12 @@ class Carousel extends Component {
     this.state = {
       recommendations: [],
       category: 'men_athletic',
-      position: 0
+      position: 0,
+      sliding: false
     };
     this.getOrder = this.getOrder.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
+    this.doSliding = this.doSliding.bind(this);
     this.getRandomColor = this.getRandomColor.bind(this);
     this.getRecommendations = this.getRecommendations.bind(this);
   }
@@ -46,12 +55,24 @@ class Carousel extends Component {
   nextSlide() {
     const { position, recommendations } = this.state;
     const numItems = recommendations.length || 1;
+    this.doSliding(position);
     // if positon is greater than number of items, will loop back to first position, otherwise, will increase position by 1
     this.setState({
       position: position === numItems - 1 ? 0 : position + 1 
     });
+  }
 
-  }  
+  doSliding(position) {
+    this.setState({
+      sliding: true,
+      position
+    });
+    setTimeout(() => {
+      this.setState({
+        sliding: false
+      });
+    }, 50);
+  }
 
   // when sending a get request, will need the category name I'm looking for, then send that category name to get shoes are matching that category name
   getRecommendations() {
@@ -74,11 +95,12 @@ class Carousel extends Component {
   }
   
   render() {
+    const { sliding, direction, position } = this.state;
     return (
       <Wrapper>
-        <Ul>
+        <Ul sliding={sliding} direction={direction}>
           {this.state.recommendations.map((shoe, index) => {
-            console.log('This is the index', index);
+            // console.log('This is the index', index);
             return <Shoe 
               key={index}
               order={this.getOrder(index)} 
