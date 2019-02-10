@@ -4,14 +4,14 @@ import Shoe from './Shoe.jsx';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 30%;
 `;
 
 const Ul = styled.div`
   list-style-type: none;
   display: flex;
   margin: 0px 0px;
-  transition: ${(props) => props.sliding ? 'none' : 'transform 1s ease'};
+  transition: ${(props) => props.sliding ? 'none' : 'transform 0.25s'};
   transform: ${(props) => {
     if (!props.sliding) {
       return 'translateX(calc(-80% - 20px))';
@@ -24,25 +24,22 @@ const Ul = styled.div`
 `;
 
 const ButtonLeft = styled.button`
-  background-color: rgba(232, 232, 232, 0.9);
+  background-color: rgba(232, 232, 232, 0.3);
   transition: background-color 0.5s ease-in-out;
   border: black;
   color: rgb(109, 109, 109);
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
   padding: 15px 17px 10px 17px;
   font-size: 16px;
   border-radius: 50%;
   position: absolute;
-  left: 100px;
-  top: 150px;
+  left: 110px;
+  top: 270px;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.9);
   } 
 
-      -moz-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
@@ -50,19 +47,16 @@ const ButtonLeft = styled.button`
 `;
 
 const ButtonRight = styled.button`
-  background-color: rgba(232, 232, 232, 0.9);
+  background-color: rgba(232, 232, 232, 0.3);
   transition: background-color 0.5s ease-in-out;
   border: black;
   color: rgb(109, 109, 109);
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
   padding: 15px 17px 10px 17px;
   font-size: 16px;
   border-radius: 50%;
   position: absolute;
-  right: 100px;
-  top: 150px;
+  right: 110px;
+  top: 270px;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.9);
@@ -93,7 +87,7 @@ class Carousel extends Component {
 
   getOrder(itemIndex) {
     const { position, recommendations } = this.state;
-    const numItems = recommendations.length || 1;
+    const numItems = recommendations.length;
 
     if (itemIndex - position < 0) {
       return numItems - Math.abs(itemIndex - position);
@@ -104,7 +98,7 @@ class Carousel extends Component {
 
   nextSlide() {
     const { position, recommendations } = this.state;
-    const numItems = recommendations.length || 1;
+    const numItems = recommendations.length;
     this.doSliding('next', position === numItems - 1 ? 0 : position + 1);
     // if positon is greater than number of items, will loop back to first position, otherwise, will increase position by 1
   }
@@ -119,14 +113,14 @@ class Carousel extends Component {
   doSliding(direction, position) {
     this.setState({
       sliding: true,
-      direction,
-      position
+      direction: direction,
+      position: position
     });
     setTimeout(() => {
       this.setState({
         sliding: false
       });
-    }, 50);
+    }, 25);
   }
 
   // when sending a get request, will need the category name I'm looking for, then send that category name to get shoes are matching that category name
@@ -168,8 +162,8 @@ class Carousel extends Component {
           })
           }
         </Ul>
-        <ButtonRight onClick={ () => this.prevSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonRight>
-        <ButtonLeft onClick={ () => this.nextSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonLeft>
+        {position !== 11 ? <ButtonRight onClick={ () => this.nextSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonRight> : null}
+        {position !== 0 ? <ButtonLeft onClick={ () => this.prevSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonLeft> : null}
       </Wrapper>
     );
   }
