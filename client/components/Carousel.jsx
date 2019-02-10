@@ -4,20 +4,19 @@ import Shoe from './Shoe.jsx';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width: 30%;
+  width: 20%;
 `;
 
 const Ul = styled.div`
   list-style-type: none;
   display: flex;
-  margin: 0px 0px;
   transition: ${(props) => props.sliding ? 'none' : 'transform 0.25s'};
   transform: ${(props) => {
     if (!props.sliding) {
-      return 'translateX(calc(-80% - 20px))';
+      return 'translateX(calc(-60% - 20px))';
     }
     if (props.direction === 'prev') {
-      return 'translateX(calc(2 * (-80% - 20px)))';
+      return 'translateX(calc(2 * (-60% - 20px)))';
     }
     return 'translateX(0%)';
   }}
@@ -147,6 +146,7 @@ class Carousel extends Component {
     const { sliding, direction, position } = this.state;
     return (
       <Wrapper>
+        <img src="https://s3.us-east-2.amazonaws.com/carousel-fec/youMay.png"></img>
         <Ul sliding={sliding} direction={direction}>
           {this.state.recommendations.map((shoe, index) => {
             // console.log('This is the index', index);
