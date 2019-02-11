@@ -1,25 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Img = styled.img`
-  margin: 10px;
-  height: 370px;
-  width: 390px;
-  `;
 
 const Li = styled.li`
-  flex: 1 0 100%;
-  flex-basis: 80%;
-  order: ${(props) => props.order}
+  flex: 1 0 30%;
+  margin-right: 20px;
+  order: ${(props) => props.order};
   color: rgb(109, 109, 109);
   `;
 
-const Container = styled.div`
-  margin-left: 10px;
+const Text = styled.div`
+  font-size: 15px;
+`;
+
+const Color = styled.div`
+  font-size: 13px;
+  border-bottom: 1px solid rgba(109, 109, 109, 0.5);
+  padding: 5px 0px;
+  margin: 5px 0px 10px; 
 `;
 
 const Div = styled.div`
   color: black;
+  margin-bottom: 
 `;
 
 const Shoe = (props) => {
@@ -28,16 +31,17 @@ const Shoe = (props) => {
 
   return (
     <Li order={props.order}>
-      <Img src={props.shoeUrl} /><br />
-      <Container>
+      <img src={props.shoeUrl} /><br />
+      <Text>
         <Div>
-          {randomColor} {randomColor === 1 ? 'Color' : 'Colors'}<br />
-          <hr />
+          <Color>
+            {randomColor} {randomColor === 1 ? 'Color' : 'Colors'}<br />
+          </Color>
           {props.name}<br />
         </Div>
         {props.category === 'men_athletic' ? 'Basketball Shoe' : props.category}<br />
         {`$${props.price}`}<br />
-      </Container>
+      </Text>
     </Li>
   );
 };

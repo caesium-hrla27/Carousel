@@ -2,24 +2,40 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Shoe from './Shoe.jsx';
 import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-const Wrapper = styled.div`
-  width: 20%;
+const GlobalStyles = createGlobalStyle`
+  body {
+    @import url('https://fonts.googleapis.com/css?family=Heebo');
+    font-family: 'Heebo', sans-serif;
+  }
 `;
 
-const Ul = styled.div`
+const Wrapper = styled.div`
+  width: 100%;
+  overflow: hidden;
+`;
+
+const Ul = styled.ul`
   list-style-type: none;
   display: flex;
-  transition: ${(props) => props.sliding ? 'none' : 'transform 0.25s'};
+  margin: 0 0 0 0;
+  padding: 0px 40px;
+  transition: ${(props) => props.sliding ? 'none' : 'transform 350ms ease-in-out 0s'};
   transform: ${(props) => {
     if (!props.sliding) {
-      return 'translateX(calc(-60% - 20px))';
+      return 'translateX(calc(-30% - 20px))';
     }
     if (props.direction === 'prev') {
-      return 'translateX(calc(2 * (-60% - 20px)))';
+      return 'translateX(calc(2 * -30% - 20px))';
     }
     return 'translateX(0%)';
   }}
+`;
+
+const Div = styled.div`
+  width: 100%;
+  padding: 0px 25px;
 `;
 
 const ButtonLeft = styled.button`
@@ -31,8 +47,8 @@ const ButtonLeft = styled.button`
   font-size: 16px;
   border-radius: 50%;
   position: absolute;
-  left: 110px;
-  top: 270px;
+  left: 80px;
+  top: 330px;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.9);
@@ -55,7 +71,7 @@ const ButtonRight = styled.button`
   border-radius: 50%;
   position: absolute;
   right: 110px;
-  top: 270px;
+  top: 330px;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.9);
@@ -69,57 +85,18 @@ class Carousel extends Component {
       recommendations: [],
       category: 'men_athletic',
       position: 0,
-      direction: 'next',
       sliding: false
     };
+    this.getRandomColor = this.getRandomColor.bind(this);
+    this.getRecommendations = this.getRecommendations.bind(this);
     this.getOrder = this.getOrder.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.prevSlide = this.prevSlide.bind(this);
-    this.doSliding = this.doSliding.bind(this);
-    this.getRandomColor = this.getRandomColor.bind(this);
-    this.getRecommendations = this.getRecommendations.bind(this);
+    this.slideCarousel = this.slideCarousel.bind(this);
   }
 
   componentDidMount() {
     this.getRecommendations();
-  }
-
-  getOrder(itemIndex) {
-    const { position, recommendations } = this.state;
-    const numItems = recommendations.length;
-
-    if (itemIndex - position < 0) {
-      return numItems - Math.abs(itemIndex - position);
-    }
-
-    return itemIndex - position;
-  }
-
-  nextSlide() {
-    const { position, recommendations } = this.state;
-    const numItems = recommendations.length;
-    this.doSliding('next', position === numItems - 1 ? 0 : position + 1);
-    // if positon is greater than number of items, will loop back to first position, otherwise, will increase position by 1
-  }
-
-  prevSlide() {
-    const { position, recommendations } = this.state;
-    const numItems = recommendations.length || 1;
-    this.doSliding('prev', position === 0 ? numItems - 1 : position - 1);
-  }
-
-
-  doSliding(direction, position) {
-    this.setState({
-      sliding: true,
-      direction: direction,
-      position: position
-    });
-    setTimeout(() => {
-      this.setState({
-        sliding: false
-      });
-    }, 25);
   }
 
   // when sending a get request, will need the category name I'm looking for, then send that category name to get shoes are matching that category name
@@ -141,18 +118,77 @@ class Carousel extends Component {
     let randomNum = Math.ceil(Math.random() * 10);
     return randomNum;
   }
+
+  getOrder(index) {
+    const {position, recommendations} = this.state;
+    const numItems = recommendations.length;
+
+    if (index - position > 0) {
+      return index - position;
+    }
+    if (index - position < 0) {
+      return numItems - Math.abs(index - position);
+    }
+
+  }
+
+  //increment the carousel position (in state) -- getOrder will then re-order all of the slides each time nextSlide is invoked
+
+  nextSlide() {
+    const { position, recommendations} = this.state;
+    const numItems = recommendations.length;
+
+    let nextPosition;
+    
+    nextPosition = position + 1;
+
+    this.slideCarousel('next', nextPosition);
+
+  }
+
+  prevSlide() {
+    const { position, recommendations} = this.state;
+    const numItems = recommendations.length;
+
+    let prevPosition;
+    
+    prevPosition = position - 1;
+
+    this.slideCarousel('prev', prevPosition);
+
+  }
+
+  // setting sliding to true will trigger the sliding animation - ensures it will only slide when buttons are clicked
+  // once setState has been set to true, we want to then toggle it back to false to "stop" the sliding motion
+  // pass 2nd setState in as a callback to the first so we ensure this happens after the first setState
+
+  slideCarousel(direction, position) {
+    this.setState({
+      sliding: true,
+      direction: direction,
+      position: position
+    });
+    setTimeout(() => {
+      this.setState({
+        sliding: false
+      });
+    }, 50);    
+  }
   
   render() {
     const { sliding, direction, position } = this.state;
     return (
       <Wrapper>
-        <img src="https://s3.us-east-2.amazonaws.com/carousel-fec/youMay.png"></img>
+        <GlobalStyles />
+        <Div>
+          <img src="https://s3.us-east-2.amazonaws.com/carousel-fec/youMay.png"></img>
+        </Div>
         <Ul sliding={sliding} direction={direction}>
           {this.state.recommendations.map((shoe, index) => {
             // console.log('This is the index', index);
             return <Shoe 
               key={index}
-              order={this.getOrder(index)} 
+              order={this.getOrder(index)}
               id={shoe.id} 
               name={shoe.name} 
               price={shoe.price} 
