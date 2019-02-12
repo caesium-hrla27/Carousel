@@ -44,10 +44,9 @@ const ButtonLeft = styled.button`
   border: black;
   color: rgb(109, 109, 109);
   padding: 15px 17px 10px 17px;
-  font-size: 16px;
   border-radius: 50%;
   position: absolute;
-  left: 80px;
+  left: 35px;
   top: 330px;
 
   &:hover {
@@ -67,10 +66,9 @@ const ButtonRight = styled.button`
   border: black;
   color: rgb(109, 109, 109);
   padding: 15px 17px 10px 17px;
-  font-size: 16px;
   border-radius: 50%;
   position: absolute;
-  right: 110px;
+  right: 35px;
   top: 330px;
 
   &:hover {
@@ -96,10 +94,9 @@ const Bar = styled.div`
 
   left: ${(props) => {
     console.log('this is the rightclick', props.clickPosition);
-    return props.clickPosition === 1 ? '100px' : props.clickPosition === 2 ? '200px' : props.clickPosition === 3 ? '300px' : 
-      props.clickPosition === 4 ? '400px' : props.clickPosition === 5 ? '500px' : props.clickPosition === 6 ? '600px' : 
-        props.clickPosition === 7 ? '700px' : props.clickPosition === 8 ? '800px' : props.clickPosition === 9 ? '900px' :
-          props.clickPosition === 10 ? '1000px' : '0px';
+    return props.clickPosition === 1 ? '111px' : props.clickPosition === 2 ? '222px' : props.clickPosition === 3 ? '333px' : 
+      props.clickPosition === 4 ? '444px' : props.clickPosition === 5 ? '555px' : props.clickPosition === 6 ? '666px' : 
+        props.clickPosition === 7 ? '777px' : props.clickPosition === 8 ? '890px' : props.clickPosition === 9 ? '1000px' : '0px';
   }
 }}
 `;
@@ -238,7 +235,7 @@ class Carousel extends Component {
           })
           }
         </Ul>
-        {position !== 11 ? <ButtonRight onClick={ () => this.nextSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonRight> : null}
+        {position !== 9 ? <ButtonRight onClick={ () => this.nextSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonRight> : null}
         {position !== 0 ? <ButtonLeft onClick={ () => this.prevSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonLeft> : null}
         <div id="indicator">
           <DivBar>
