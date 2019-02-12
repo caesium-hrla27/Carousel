@@ -78,6 +78,32 @@ const ButtonRight = styled.button`
   } 
 `;
 
+const DivBar = styled.div`
+  position: relative;
+  width: 95%;
+  margin: 40px 30px 40px 30px;  
+  border-bottom: 2px solid rgba(109, 109, 109, 0.25);
+  z-index: 1;
+  border-radius: 2px;
+`;
+
+const Bar = styled.div`
+  width: 28%;
+  border-bottom: 2px solid black;
+  z-index: 2;
+  position: absolute;
+  transition: ${(props) => props.clickPosition > 0 ? 'left 0.5s' : 'none'};
+
+  left: ${(props) => {
+    console.log('this is the rightclick', props.clickPosition);
+    return props.clickPosition === 1 ? '100px' : props.clickPosition === 2 ? '200px' : props.clickPosition === 3 ? '300px' : 
+      props.clickPosition === 4 ? '400px' : props.clickPosition === 5 ? '500px' : props.clickPosition === 6 ? '600px' : 
+        props.clickPosition === 7 ? '700px' : props.clickPosition === 8 ? '800px' : props.clickPosition === 9 ? '900px' :
+          props.clickPosition === 10 ? '1000px' : '0px';
+  }
+}}
+`;
+
 class Carousel extends Component {
   constructor(props) {
     super(props);
@@ -85,7 +111,8 @@ class Carousel extends Component {
       recommendations: [],
       category: 'men_athletic',
       position: 0,
-      sliding: false
+      sliding: false,
+      clickPosition: 0,
     };
     this.getRandomColor = this.getRandomColor.bind(this);
     this.getRecommendations = this.getRecommendations.bind(this);
@@ -135,24 +162,37 @@ class Carousel extends Component {
   //increment the carousel position (in state) -- getOrder will then re-order all of the slides each time nextSlide is invoked
 
   nextSlide() {
-    const { position, recommendations} = this.state;
+    const { position, recommendations, clickPosition} = this.state;
     const numItems = recommendations.length;
 
     let nextPosition;
+    let newPosition;
     
     nextPosition = position + 1;
+    newPosition = clickPosition + 1;
+
+
+    this.setState({
+      clickPosition: newPosition
+    });
 
     this.slideCarousel('next', nextPosition);
 
   }
 
   prevSlide() {
-    const { position, recommendations} = this.state;
+    const { position, recommendations, clickPosition} = this.state;
     const numItems = recommendations.length;
 
     let prevPosition;
+    let newPosition;
     
     prevPosition = position - 1;
+    newPosition = clickPosition - 1;
+
+    this.setState({
+      clickPosition: newPosition
+    });
 
     this.slideCarousel('prev', prevPosition);
 
@@ -170,13 +210,14 @@ class Carousel extends Component {
     });
     setTimeout(() => {
       this.setState({
-        sliding: false
+        sliding: false,
       });
     }, 50);    
   }
   
   render() {
-    const { sliding, direction, position } = this.state;
+    const { sliding, direction, position, clickPosition } = this.state;
+    console.log('this is the indicator position', clickPosition);
     return (
       <Wrapper>
         <GlobalStyles />
@@ -185,7 +226,6 @@ class Carousel extends Component {
         </Div>
         <Ul sliding={sliding} direction={direction}>
           {this.state.recommendations.map((shoe, index) => {
-            // console.log('This is the index', index);
             return <Shoe 
               key={index}
               order={this.getOrder(index)}
@@ -200,6 +240,12 @@ class Carousel extends Component {
         </Ul>
         {position !== 11 ? <ButtonRight onClick={ () => this.nextSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonRight> : null}
         {position !== 0 ? <ButtonLeft onClick={ () => this.prevSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonLeft> : null}
+        <div id="indicator">
+          <DivBar>
+            <Bar clickPosition={clickPosition}>
+            </Bar>
+          </DivBar>
+        </div>
       </Wrapper>
     );
   }
