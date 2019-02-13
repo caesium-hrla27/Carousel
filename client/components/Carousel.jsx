@@ -5,8 +5,6 @@ import styled from 'styled-components';
 
 import { GlobalStyles, Wrapper, Ul, Div, ButtonLeft, ButtonRight, Bar, DivBar } from './style.js';
 
-
-
 class Carousel extends Component {
   constructor(props) {
     super(props);
