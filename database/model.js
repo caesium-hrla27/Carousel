@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const shoes = require('../dummyData.js');
+const shoeData = require('../shoeData.js');
 
 let shoesSchema = new mongoose.Schema({
   name: { type: String, require: true },
@@ -28,7 +28,7 @@ let getRecommendedShoes = (category) => {
   return Shoe.find({ category: category }).limit(12);
 }
 
-// save(shoes.shoes);
+save(shoeData.shoes);
 
 module.exports = { 
 	Shoe,
