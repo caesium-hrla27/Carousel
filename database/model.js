@@ -1,10 +1,14 @@
 const mongoose = require('mongoose');
-const shoes = require('../dummyData.js');
+const shoeData = require('../shoeData.js');
 
 let shoesSchema = new mongoose.Schema({
+  id: { type: String, require: true },
   name: { type: String, require: true },
-  price: { type: String, require: true },
+  price: { type: Number, require: true },
+  salePrice: { type: Number },
   shoeUrl: { type: String, require: true },
+  reviewsNum: { type: Number },
+  reviewsAvg: { type: Number },
   category: { type: String, require: true }
 });
 
@@ -13,9 +17,14 @@ let Shoe = mongoose.model('shoelists', shoesSchema);
 let save = (shoes) => {
   shoes.forEach(shoe => {
     newShoe = new Shoe({
+
+      id: shoe.id,
       name: shoe.name,
       price: shoe.price,
+      salePrice: shoe.salePrice,
       shoeUrl: shoe.shoeUrl,
+      reviewsNum: shoe.reviewsNum,
+      reviewsAvg: shoe.reviewsAvg,
       category: shoe.category
     })
       .save()
@@ -28,7 +37,7 @@ let getRecommendedShoes = (category) => {
   return Shoe.find({ category: category }).limit(12);
 };
 
-// save(shoes.shoes);
+// save(shoeData.shoes);
 
 module.exports = { 
   Shoe,
