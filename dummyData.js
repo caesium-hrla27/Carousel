@@ -1,9 +1,9 @@
 const shoes = [
-
 // MEN'S SHOES
-  // ATHLETIC - BASKETBALL
+// ATHLETIC - BASKETBALL
+
   {
-    id: M-1,
+    id: 'M-1',
     name: 'Nike Zoom KD11 BHM',
     price: 150,
     salePrice: null,
@@ -13,8 +13,8 @@ const shoes = [
     category: 'men_athletic'
   }, 
  
-   {
-    id: M-2,
+  {
+    id: 'M-2',
     name: 'Nike Air Versitile III',
     price: 66.97,
     salePrice: null,
@@ -24,8 +24,8 @@ const shoes = [
     category: 'men_athletic'
   },       
  
-   {
-    id: M-3,
+  {
+    id: 'M-3',
     name: 'Nike Air Precision II FlyEase',
     price: 70,
     salePrice: null,
@@ -35,8 +35,8 @@ const shoes = [
     category: 'men_athletic'
   },     
  
-   {
-    id: M-4,
+  {
+    id: 'M-4',
     name: 'Nike KD Trey 5 VI',
     price: 90,
     salePrice: null,
@@ -46,8 +46,8 @@ const shoes = [
     category: 'men_athletic'
   },  
  
-   {
-    id: M-5,
+  {
+    id: 'M-5',
     name: 'LeBron Witness III',
     price: 90,
     salePrice: null,
@@ -57,8 +57,8 @@ const shoes = [
     category: 'men_athletic'
   },       
  
-   {
-    id: M-6,
+  {
+    id: 'M-6',
     name: 'Nike Air Max Infuriate 2 Mid',
     price: 85,
     salePrice: null,
@@ -67,9 +67,9 @@ const shoes = [
     reviewsAvg: 5,
     category: 'men_athletic'
   },             
- 7 
-   {
-    id: M-7,
+  
+  {
+    id: 'M-7',
     name: 'Nike Air Precision II FlyEase',
     price: 70,
     salePrice: null,
@@ -80,7 +80,7 @@ const shoes = [
   },             
   
    {
-    id: M-8,
+    id: 'M-8',
     name: 'Air Jordan Future',
     price: 150,
     salePrice: 104.97,
@@ -91,7 +91,7 @@ const shoes = [
   },       
   
    {
-    id: M-9,
+    id: 'M-9',
     name: 'Jordan Melo 1.5 SE',
     price: 140,
     salePrice: 97.97,
@@ -102,7 +102,7 @@ const shoes = [
   },       
   
    {
-    id: M-10,
+    id: 'M-10',
     name: 'Nike Zoom KD11 BHM',
     price: 150,
     salePrice: null,
@@ -113,7 +113,7 @@ const shoes = [
   },             
   
    {
-   id: M-11, 
+   id: 'M-11', 
     name: 'Air Jordan 1 Mid SE',
     price: 120,
     salePrice: null,
@@ -124,7 +124,7 @@ const shoes = [
   },             
  
    {
-    id: M-12,
+    id: 'M-12',
     name: 'Kyrie 5',
     price: 130,
     salePrice: null,
@@ -135,7 +135,7 @@ const shoes = [
   },         
  
    {
-    id: M-13,
+    id: 'M-13',
     name: 'Air Jordan XXXIII',
     price: 175,
     salePrice: null,
@@ -146,7 +146,7 @@ const shoes = [
   },   
  
    {
-    id: M-14,
+    id: 'M-14',
     name: 'Kobe AD',
     price: 140,
     salePrice: null,
@@ -157,7 +157,7 @@ const shoes = [
   },       
  
   {
-    id: M-15,
+    id: 'M-15',
     name: 'LeBron 16',
     price: 185,
     salePrice: null,
@@ -168,9 +168,9 @@ const shoes = [
   }, 
 
   {
-    id: M-16,
+    id: 'M-16',
     name: 'Kyrie Low',
-    price: 110
+    price: 110,
     salePrice: 98.97,
     shoeUrl: 'https://s3.us-east-2.amazonaws.com/carousel-fec/M-A-KYRIE-LOW.jpeg',
     reviewsNum: null,
@@ -179,7 +179,7 @@ const shoes = [
   },      
  
   {
-    id: M-17,
+    id: 'M-17',
     name: 'Nike Air Force Max',
     price: 160,
     salePrice: null,
@@ -190,7 +190,7 @@ const shoes = [
   },      
  
   {
-    id: M-18,
+    id: 'M-18',
     name: 'PG 2.5 Pendleton',
     price: 120,
     salePrice: null,
@@ -201,7 +201,7 @@ const shoes = [
   },      
  
   {
-    id: M-19,
+    id: 'M-19',
     name: 'Nike Mamba Rage',
     price: 100,
     salePrice: null,
@@ -212,7 +212,7 @@ const shoes = [
   },      
  
   {
-    id: M-20,
+    id: 'M-20',
     name: 'Kyrie 4 (Team)',
     price: 120,
     salePrice: 95.97,
@@ -223,7 +223,7 @@ const shoes = [
   },     
  
   {
-    id: M-21,
+    id: 'M-21',
     name: 'PG 3 BHM',
     price: 110,
     salePrice: null,
@@ -234,7 +234,7 @@ const shoes = [
   },
 
   {
-    id: M-22,
+    id: 'M-22',
     name: 'Kyrie 5 CNY',
     price: 130,
     salePrice: null,
@@ -245,7 +245,7 @@ const shoes = [
   },  
  
   {
-    id: M-23,
+    id: 'M-23',
     name: 'Jordan "Why Not?" Zer0.2',
     price: 125,
     salePrice: null,
@@ -256,7 +256,7 @@ const shoes = [
   },      
  
   {
-    id: M-24,
+    id: 'M-24',
     name: 'Jordan Max Aura',
     price: 120,
     salePrice: null,
@@ -267,7 +267,7 @@ const shoes = [
   },
 
   {
-    id: M-25,
+    id: 'M-25',
     name: 'Jordan "Why Not?" ZER0.1',
     price: 125,
     salePrice: 94.97,
@@ -280,7 +280,7 @@ const shoes = [
   // LIFESTYLE
 
   {
-    id: M-26,
+    id: 'M-26',
     name: 'Air Jordan Legacy 312',
     price: 150,
     salePrice: 104.97,
@@ -291,7 +291,7 @@ const shoes = [
   },
 
   {
-    id: M-27,
+    id: 'M-27',
     name: 'Air Jordan 9 Retro NRG',
     price: 225,
     salePrice: 156.97,
@@ -302,7 +302,7 @@ const shoes = [
   },
 
   {
-    id: M-28,
+    id: 'M-28',
     name: 'Nike Air More Money',
     price: 160,
     salePrice: 111.97,
@@ -313,7 +313,7 @@ const shoes = [
   },
 
   {
-    id: M-29,
+    id: 'M-29',
     name: 'Nike Air Force 270 Utility',
     price: 175,
     salePrice: 112.97,
@@ -324,7 +324,7 @@ const shoes = [
   },
 
   {
-    id: M-30,
+    id: 'M-30',
     name: 'Nike Air Footscape Mid Utility DM',
     price: 160,
     salePrice: null,
@@ -335,7 +335,7 @@ const shoes = [
   },
 
   {
-    id: M-31,
+    id: 'M-31',
     name: 'Nike SF Air Force 1',
     price: 180,
     salePrice: null,
@@ -346,7 +346,7 @@ const shoes = [
   },
 
   {
-    id: M-32,
+    id: 'M-32',
     name: 'Nike SF Air Force 1 High',
     price: 200,
     salePrice: 119.97,
@@ -357,7 +357,7 @@ const shoes = [
   },
 
   {
-    id: M-33,
+    id: 'M-33',
     name: 'Nike Air Huarache Drift',
     price: 120,
     salePrice: null,
@@ -368,7 +368,7 @@ const shoes = [
   },
 
   {
-    id: M-34,
+    id: 'M-34',
     name: 'Nike Air Max 95',
     price: 170,
     salePrice: null,
@@ -379,7 +379,7 @@ const shoes = [
   },
 
   {
-    id: M-35,
+    id: 'M-35',
     name: 'Nike Air Max Plus Premium',
     price: 170,
     salePrice: null,
@@ -390,7 +390,7 @@ const shoes = [
   },
 
   {
-    id: M-36,
+    id: 'M-36',
     name: 'Nike Air Max Wavy',
     price: 110,
     salePrice: null,
@@ -401,7 +401,7 @@ const shoes = [
   },
 
   {
-    id: M-37,
+    id: 'M-37',
     name: 'Nike Air Force Max CB',
     price: 150,
     salePrice: null,
@@ -412,7 +412,7 @@ const shoes = [
   },
 
   {
-    id: M-38,
+    id: 'M-38',
     name: 'Nike Air Max 95 Essential',
     price: 160,
     salePrice: null,
@@ -423,7 +423,7 @@ const shoes = [
   },
 
   {
-    id: M-39,
+    id: 'M-39',
     name: 'Nike Air Max 95 OG',
     price: 160,
     salePrice: null,
@@ -434,7 +434,7 @@ const shoes = [
   },
 
   {
-    id: M-40,
+    id: 'M-40',
     name: 'Nike Air Max 95 NRG',
     price: 190,
     salePrice: null,
@@ -445,7 +445,7 @@ const shoes = [
   },
 
   {
-    id: M-41,
+    id: 'M-41',
     name: 'Nike Air VaporMax 95',
     price: 190,
     salePrice: 161.97,
@@ -456,10 +456,10 @@ const shoes = [
   },
 
   {
-    id: M-42,
+    id: 'M-42',
     name: 'Nike Air Max 95 SE',
-    price: 143.97 - on sale from 170,
-    salePrice: null,
+    price: 170,
+    salePrice: 143.97,
     shoeUrl: 'https://s3.us-east-2.amazonaws.com/carousel-fec/M-L-AIR-MAX-95-SE.jpeg',
     reviewsNum: null,
     reviewsAvg: null,
@@ -467,7 +467,7 @@ const shoes = [
   },
 
   {
-    id: M-43,
+    id: 'M-43',
     name: 'Nike Air Max 97 SE',
     price: 170,
     salePrice: 109.97,
@@ -478,7 +478,7 @@ const shoes = [
   },
  
   {
-    id: M-44,
+    id: 'M-44',
     name: 'Nike Air Max 95 Premium',
     price: 170,
     salePrice: null,
@@ -489,7 +489,7 @@ const shoes = [
   },
  
   {
-    id: M-45,
+    id: 'M-45',
     name: 'Nike Air Max 97 Premium',
     price: 180,
     salePrice: 125.97,
@@ -500,7 +500,7 @@ const shoes = [
   },
 
   {
-    id: M-46,
+    id: 'M-46',
     name: 'Nike Air Max 97',
     price: 160,
     salePrice: 105.97,
@@ -511,7 +511,7 @@ const shoes = [
   },
 
   {
-    id: M-47,
+    id: 'M-47',
     name: 'Nike Air Max VaporMax Plus',
     price: 190,
     salePrice: null,
@@ -522,7 +522,7 @@ const shoes = [
   },
 
   {
-    id: M-48,
+    id: 'M-48',
     name: 'Nike Air Huarache Gripp',
     price: 150,
     salePrice: 111.97,
@@ -533,7 +533,7 @@ const shoes = [
   },
 
   {
-    id: M-49,
+    id: 'M-49',
     name: 'Air Jordan 1 Mid',
     price: 110,
     salePrice: null,
@@ -544,7 +544,7 @@ const shoes = [
   },
 
   {
-    id: M-50,
+    id: 'M-50',
     name: 'Air Jordan 1 Moto',
     price: 180,
     salePrice: null,
@@ -559,7 +559,7 @@ const shoes = [
   // LIFESTYLE
 
   {
-    id: W-1,
+    id: 'W-1',
     name: 'Nike Outburst',
     price: 90,
     salePrice: null,
@@ -570,7 +570,7 @@ const shoes = [
   },
 
   {
-    id: W-2,
+    id: 'W-2',
     name: 'Nike Internationalist',
     price: 90,
     salePrice: null,
@@ -581,7 +581,7 @@ const shoes = [
   },
 
   {
-    id: W-3,
+    id: 'W-3',
     name: 'Nike Classic Cortez',
     price: 70,
     salePrice: null,
@@ -592,7 +592,7 @@ const shoes = [
   },
 
   {
-    id: W-4,
+    id: 'W-4',
     name: 'Nike Blazer Low Lux Premium',
     price: 85,
     salePrice: null,
@@ -603,7 +603,7 @@ const shoes = [
   },
 
   {
-    id: W-5,
+    id: 'W-5',
     name: 'Nike Classic Cortez Premium',
     price: 90,
     salePrice: null,
@@ -614,7 +614,7 @@ const shoes = [
   },
 
   {
-    id: W-6,
+    id: 'W-6',
     name: 'Nike Outburst Premium',
     price: 100,
     salePrice: null,
@@ -625,7 +625,7 @@ const shoes = [
   },
 
   {
-    id: W-7,
+    id: 'W-7',
     name: 'Nike Air Max 1',
     price: 110,
     salePrice: null,
@@ -636,7 +636,7 @@ const shoes = [
   },
 
   {
-    id: W-8,
+    id: 'W-8',
     name: 'Nike EXP-X14-Premium',
     price: 120,
     salePrice: null,
@@ -647,7 +647,7 @@ const shoes = [
   },
 
   {
-    id: W-9,
+    id: 'W-9',
     name: 'Nike Air Max Sequent 4',
     price: 100,
     salePrice: null,
@@ -658,7 +658,7 @@ const shoes = [
   },
 
   {
-    id: W-10,
+    id: 'W-10',
     name: 'Nike Tanjun',
     price: 65,
     salePrice: null,
@@ -669,7 +669,7 @@ const shoes = [
   },
 
   {
-    id: W-11,
+    id: 'W-11',
     name: 'Nike Air Huarache City Move',
     price: 90,
     salePrice: null,
@@ -680,7 +680,7 @@ const shoes = [
   },
  
   {
-    id: W-12,
+    id: 'W-12',
     name: 'Nike Blazer Mid Vintage',
     price: 85,
     salePrice: null,
@@ -691,7 +691,7 @@ const shoes = [
   },
 
   {
-    id: W-13,
+    id: 'W-13',
     name: 'Nike Blazer Mid Premium',
     price: 100,
     salePrice: 89.97,
@@ -702,7 +702,7 @@ const shoes = [
   },
 
   {
-    id: W-14,
+    id: 'W-14',
     name: 'Nike Blazer Mid',
     price: 100,
     salePrice: null,
@@ -713,7 +713,7 @@ const shoes = [
   },
 
   {
-    id: W-15,
+    id: 'W-15',
     name: 'Nike SB Bruin High',
     price: 85,
     salePrice: null,
@@ -724,7 +724,7 @@ const shoes = [
   },
 
   {
-    id: W-16,
+    id: 'W-16',
     name: 'Nike Air Force 1 High Utility',
     price: 110,
     salePrice: null,
@@ -735,7 +735,7 @@ const shoes = [
   },
 
   {
-    id: W-17,
+    id: 'W-17',
     name: 'Nike Blazer Low Suede',
     price: 75,
     salePrice: 66.97,
@@ -746,7 +746,7 @@ const shoes = [
   },
  
   {
-    id: W-18,
+    id: 'W-18',
     name: 'Nike Vandal High LX',
     price: 110,
     salePrice: null,
@@ -757,7 +757,7 @@ const shoes = [
   },
 
   {
-    id: W-19,
+    id: 'W-19',
     name: 'Nike Air Force 1 Sage Low',
     price: 100,
     salePrice: null,
@@ -768,7 +768,7 @@ const shoes = [
   },
 
   {
-    id: W-20,
+    id: 'W-20',
     name: 'Nike Air Max 90',
     price: 110,
     salePrice: null,
@@ -779,7 +779,7 @@ const shoes = [
   },
  
   {
-    id: W-21,
+    id: 'W-21',
     name: 'Nike Air Force 1 Jester High XX',
     price: 130,
     salePrice: null,
@@ -790,7 +790,7 @@ const shoes = [
   },
 
   {
-    id: W-22,
+    id: 'W-22',
     name: 'Nike Air Huarache City',
     price: 140,
     salePrice: null,
@@ -801,7 +801,7 @@ const shoes = [
   },
 
   {
-    id: W-23,
+    id: 'W-23',
     name: 'Nike React Element 55',
     price: 130,
     salePrice: null,
@@ -812,7 +812,7 @@ const shoes = [
   },
  
   {
-    id: W-24,
+    id: 'W-24',
     name: 'Nike Air Max 270 SE',
     price: 160,
     salePrice: null,
@@ -823,7 +823,7 @@ const shoes = [
   },
  
   {
-    id: W-25,
+    id: 'W-25',
     name: 'Nike Air Force 1 Sage High',
     price: 180,
     salePrice: null,
@@ -836,7 +836,7 @@ const shoes = [
   //ATHLETIC - RUNNING - women's running shoe
 
   {
-    id: W-26,
+    id: 'W-26',
     name: 'Nike Air Zoom Pegasus 35 Premium',
     price: 135,
     salePrice: 86.97,
@@ -847,7 +847,7 @@ const shoes = [
   },
 
   {
-    id: W-27,
+    id: 'W-27',
     name: 'Nike Odyssey React Flyknit 2 Premium',
     price: 130,
     salePrice: null,
@@ -858,7 +858,7 @@ const shoes = [
   },
  
   {
-    id: W-28,
+    id: 'W-28',
     name: 'Nike Odyssey React Flyknit 2',
     price: 120,
     salePrice: null,
@@ -869,7 +869,7 @@ const shoes = [
   },
 
   {
-    id: W-29,
+    id: 'W-29',
     name: 'Nike Epic React Flyknit Metallic Premium',
     price: 150,
     salePrice: 94.97,
@@ -880,7 +880,7 @@ const shoes = [
   },
 
   {
-    id: W-30,
+    id: 'W-30',
     name: 'Nike Rise React Flyknit',
     price: 175,
     salePrice: 112.97,
@@ -891,7 +891,7 @@ const shoes = [
   },
 
   {
-    id: W-31,
+    id: 'W-31',
     name: 'Nike Vaporfly 4% Flyknit',
     price: 250,
     salePrice: null,
@@ -902,7 +902,7 @@ const shoes = [
   },
 
   {
-    id: W-32,
+    id: 'W-32',
     name: 'Nike Free RN Flyknit 2018',
     price: 120,
     salePrice: 64.97,
@@ -913,7 +913,7 @@ const shoes = [
   },
 
   {
-    id: W-33,
+    id: 'W-33',
     name: 'Nike Free RN 2018 Graphic',
     price: 100,
     salePrice: 89.97,
@@ -924,7 +924,7 @@ const shoes = [
   },
 
   {
-    id: W-34,
+    id: 'W-34',
     name: 'Nike Air Zoom Pegasus 35',
     price: 120,
     salePrice: 85.97,
@@ -935,7 +935,7 @@ const shoes = [
   },
 
   {
-    id: W-35,
+    id: 'W-35',
     name: 'Nike Renew Rival Premium',
     price: 85,
     salePrice: 58.97,
@@ -946,7 +946,7 @@ const shoes = [
   },
 
   {
-    id: W-36,
+    id: 'W-36',
     name: 'Nike Free RN 2018',
     price: 100,
     salePrice: 74.97,
@@ -957,7 +957,7 @@ const shoes = [
   },
 
   {
-    id: W-37,
+    id: 'W-37',
     name: 'Nike Epic React Flyknit 2',
     price: 150,
     salePrice: null,
@@ -968,7 +968,7 @@ const shoes = [
   },
  
   {
-    id: W-38,
+    id: 'W-38',
     name: 'Nike Air Zoom Vomero 13',
     price: 140,
     salePrice: 95.97,
@@ -979,7 +979,7 @@ const shoes = [
   },
 
   {
-    id: W-39,
+    id: 'W-39',
     name: 'Nike Air Zoom Winflo 5',
     price: 90,
     salePrice: null,
@@ -990,7 +990,7 @@ const shoes = [
   },
 
   {
-    id: W-40,
+    id: 'W-40',
     name: 'Nike Free TR 8 Metallic',
     price: 100,
     salePrice: 84.97,
@@ -1001,7 +1001,7 @@ const shoes = [
   },
 
   {
-    id: W-41,
+    id: 'W-41',
     name: 'Nike Air Zoom Pegasus 35 Metallic',
     price: 130,
     salePrice: 103.97,
@@ -1012,7 +1012,7 @@ const shoes = [
   },
 
   {
-    id: W-42,
+    id: 'W-42',
     name: 'Nike Air Zoom Terra Kiger 4',
     price: 125,
     salePrice: null,
@@ -1023,7 +1023,7 @@ const shoes = [
   },
 
   {
-    id: W-43,
+    id: 'W-43',
     name: 'Nike Air Zoom Structure 22',
     price: 120,
     salePrice: null,
@@ -1034,7 +1034,7 @@ const shoes = [
   },
 
   {
-    id: W-44,
+    id: 'W-44',
     name: 'Nike Zoom Fly SP',
     price: 150,
     salePrice: 96.97,
@@ -1045,7 +1045,7 @@ const shoes = [
   },
 
   {
-    id: W-45,
+    id: 'W-45',
     name: 'Nike Free RN 2018 Shield Water-Repellent',
     price: 110,
     salePrice: 87.97,
@@ -1056,7 +1056,7 @@ const shoes = [
   },
 
   {
-    id: W-46,
+    id: 'W-46',
     name: 'Nike Air Zoom Pegasus 35 FlyEase',
     price: 120,
     salePrice: null,
@@ -1067,7 +1067,7 @@ const shoes = [
   },
 
   {
-    id: W-47,
+    id: 'W-47',
     name: 'Nike Air Zoom Wildhorse 4',
     price: 110,
     salePrice: null,
@@ -1078,7 +1078,7 @@ const shoes = [
   },
 
   {
-    id: W-48,
+    id: 'W-48',
     name: 'Nike Air Zoom Vomero 14',
     price: 140,
     salePrice: null,
@@ -1089,7 +1089,7 @@ const shoes = [
   },
 
   {
-    id: W-49,
+    id: 'W-49',
     name: 'Nike Free RN Commuter 2018',
     price: 110,
     salePrice: 79.97,
@@ -1100,7 +1100,7 @@ const shoes = [
   },
 
   {
-    id: W-50,
+    id: 'W-50',
     name: 'Nike Renew Rival Shield',
     price: 95,
     salePrice: 75.97,
@@ -1109,12 +1109,11 @@ const shoes = [
     reviewsAvg: null,
     category: 'women_athletic'
   },
-
-// KID'S SHOES
+  // KID'S SHOES
   // BOYS - Big Kids' Shoe
 
-   {
-    id: K-1,
+  {
+    id: 'K-1',
     name: 'Air Jordan 5 Laney JSP',
     price: 150,
     salePrice: null,
@@ -1125,7 +1124,7 @@ const shoes = [
   },
 
   {
-    id: K-2,
+    id: 'K-2',
     name: 'Air Jordan 1 Mid',
     price: 90,
     salePrice: null,
@@ -1136,7 +1135,7 @@ const shoes = [
   },
 
   {
-    id: K-3,
+    id: 'K-3',
     name: 'Kyrie 5',
     price: 110,
     salePrice: null,
@@ -1147,7 +1146,7 @@ const shoes = [
   },
  
   {
-    id: K-4,
+    id: 'K-4',
     name: 'Kyrie Air Max 98',
     price: 155,
     salePrice: null,
@@ -1158,7 +1157,7 @@ const shoes = [
   },
  
   {
-    id: K-5,
+    id: 'K-5',
     name: 'Air Jordan 2 Retro BHM',
     price: 150,
     salePrice: null,
@@ -1169,7 +1168,7 @@ const shoes = [
   },
 
   {
-    id: K-6,
+    id: 'K-6',
     name: 'Nike Air Max Speed Turf',
     price: 90,
     salePrice: null,
@@ -1180,7 +1179,7 @@ const shoes = [
   },
 
   {
-    id: K-7,
+    id: 'K-7',
     name: 'Air Jordan 4 Retro SE',
     price: 150,
     salePrice: null,
@@ -1191,7 +1190,7 @@ const shoes = [
   },
 
   {
-    id: K-8,
+    id: 'K-8',
     name: 'Nike Air Max 95 Now',
     price: 105,
     salePrice: null,
@@ -1202,7 +1201,7 @@ const shoes = [
   },
 
   {
-    id: K-9,
+    id: 'K-9',
     name: 'Air Jordan 12 Retro CNY',
     price: 170,
     salePrice: null,
@@ -1213,7 +1212,7 @@ const shoes = [
   },
 
   {
-    id: K-10,
+    id: 'K-1',
     name: 'Nike Air Max 270 Y2K',
     price: 125,
     salePrice: null,
@@ -1224,7 +1223,7 @@ const shoes = [
   },
 
   {
-    id: K-11,
+    id: 'K-1',
     name: 'Nike Air Max 90 Leather',
     price: 70,
     salePrice: null,
@@ -1235,7 +1234,7 @@ const shoes = [
   },
  
   {
-    id: K-12,
+    id: 'K-12',
     name: 'Nike Air Max 95',
     price: 100,
     salePrice: null,
@@ -1246,7 +1245,7 @@ const shoes = [
   },
  
   {
-    id: K-13,
+    id: 'K-13',
     name: 'Nike Air VaporMax 2019',
     price: 170,
     salePrice: null,
@@ -1257,7 +1256,7 @@ const shoes = [
   },
 
   {
-    id: K-14,
+    id: 'K-14',
     name: 'Nike Air Max 1',
     price: 85,
     salePrice: 54.97,
@@ -1268,7 +1267,7 @@ const shoes = [
   },
  
   {
-    id: K-15,
+    id: 'K-15',
     name: 'Nike Air Max 270',
     price: 120,
     salePrice: null,
@@ -1279,7 +1278,7 @@ const shoes = [
   },
  
   {
-    id: K-16,
+    id: 'K-16',
     name: 'Nike Huarache',
     price: 85,
     salePrice: null,
@@ -1290,7 +1289,7 @@ const shoes = [
   },
  
   {
-    id: K-17,
+    id: 'K-17',
     name: 'Nike Air Max 270 EMB',
     price: 130,
     salePrice: null,
@@ -1301,7 +1300,7 @@ const shoes = [
   },
  
   {
-    id: K-18,
+    id: 'K-18',
     name: 'Nike Air Force 1 Utility',
     price: 125,
     salePrice: null,
@@ -1312,7 +1311,7 @@ const shoes = [
   },
 
   {
-    id: K-19,
+    id: 'K-19',
     name: 'Nike Little Posite One',
     price: 180,
     salePrice: null,
@@ -1323,7 +1322,7 @@ const shoes = [
   },
  
   {
-    id: K-20,
+    id: 'K-20',
     name: 'Air Jordan Legacy 312',
     price: 110,
     salePrice: null,
@@ -1334,7 +1333,7 @@ const shoes = [
   },
  
   {
-    id: K-20,
+    id: 'K-20',
     name: 'Air Jordan XXXIII',
     price: 120,
     salePrice: null,
@@ -1345,7 +1344,7 @@ const shoes = [
   },
  
   {
-    id: K-21,
+    id: 'K-21',
     name: 'Nike Air Max Wavy',
     price: 95,
     salePrice: null,
@@ -1356,7 +1355,7 @@ const shoes = [
   },
  
   {
-    id: K-22,
+    id: 'K-22',
     name: 'Nike Air Max Deluxe',
     price: 160,
     salePrice: null,
@@ -1367,7 +1366,7 @@ const shoes = [
   },
  
   {
-    id: K-23,
+    id: 'K-23',
     name: 'Nike Air Max 97 Y2K',
     price: 155,
     salePrice: null,
@@ -1378,7 +1377,7 @@ const shoes = [
   },
  
   {
-    id: K-24,
+    id: 'K-24',
     name: 'LeBron 16',
     price: 160,
     salePrice: null,
@@ -1389,7 +1388,7 @@ const shoes = [
   },
  
   {
-    id: K-25,
+    id: 'K-25',
     name: 'Nike Cortez Basic TXT VDAY',
     price: 80,
     salePrice: null,
@@ -1398,11 +1397,10 @@ const shoes = [
     reviewsAvg: null,
     category: 'kids_boys'
   },
-
-    //GIRLS SHOES
+  //GIRLS SHOES
   
   {
-    id: K-26,
+    id: 'K-26',
     name: 'PG 3 NASA',
     price: 95,
     salePrice: null,
@@ -1413,8 +1411,8 @@ const shoes = [
   },
    
   {
-    id: K-27,
-    name: 'Jordan "Why Not?" Zer0.2' ,
+    id: 'K-27',
+    name: 'Jordan "Why Not?" Zer0.2',
     price: 85,
     salePrice: null,
     shoeUrl: 'https://s3.us-east-2.amazonaws.com/carousel-fec/K-G-JORDAN-WHY-NOT-ZER0.2.jpeg',
@@ -1424,8 +1422,8 @@ const shoes = [
   },  
  
   {
-    id: K-28,
-    name: 'LeBron Soldier XII' ,
+    id: 'K-28',
+    name: 'LeBron Soldier XII',
     price: 110,
     salePrice: null,
     shoeUrl: 'https://s3.us-east-2.amazonaws.com/carousel-fec/K-G-LEBRON-SOLDIER-XII.jpeg',
@@ -1435,8 +1433,8 @@ const shoes = [
   },
    
   {
-    id: K-29,
-    name: 'Kyrie Flytrap II' ,
+    id: 'K-29',
+    name: 'Kyrie Flytrap II',
     price: 70,
     salePrice: null,
     shoeUrl: 'https://s3.us-east-2.amazonaws.com/carousel-fec/K-G-KYRIE-FLYTRAP-II.jpeg',
@@ -1446,8 +1444,8 @@ const shoes = [
   },
  
   {
-    id: K-30,
-    name: 'Kyrie 4 "Flytrap"' ,
+    id: 'K-30',
+    name: 'Kyrie 4 "Flytrap"',
     price: 70,
     salePrice: null,
     shoeUrl: 'https://s3.us-east-2.amazonaws.com/carousel-fec/K-G-KYRIE-4-FLYTRAP.jpeg',
@@ -1457,8 +1455,8 @@ const shoes = [
   },
  
   {
-    id: K-31,
-    name: 'Nike Air Max 95 LV8' ,
+    id: 'K-31',
+    name: 'Nike Air Max 95 LV8',
     price: 110,
     salePrice: null,
     shoeUrl: 'https://s3.us-east-2.amazonaws.com/carousel-fec/K-G-AIR-MAX-95-LV8.jpeg',
@@ -1468,7 +1466,7 @@ const shoes = [
   },
  
   {
-    id: K-32,
+    id: 'K-32',
     name: 'Nike Team Hustle D 8 FlyEase',
     price: 65,
     salePrice: null,
@@ -1479,7 +1477,7 @@ const shoes = [
   },
  
   {
-    id: K-33,
+    id: 'K-33',
     name: 'Nike Downshifter 8 Fade',
     price: 58,
     salePrice: 47.97,
@@ -1490,7 +1488,7 @@ const shoes = [
   },
  
   {
-    id: K-34,
+    id: 'K-34',
     name: 'Nike Renew Rival',
     price: 70,
     salePrice: 51.97,
@@ -1501,7 +1499,7 @@ const shoes = [
   },
  
   {
-    id: K-35,
+    id: 'K-35',
     name: 'Nike Free RN 2018',
     price: 80,
     salePrice: 67.97,
@@ -1512,7 +1510,7 @@ const shoes = [
   },
  
   {
-    id: K-36,
+    id: 'K-36',
     name: 'Nike Revolution 4',
     price: 58,
     salePrice: null,
@@ -1523,7 +1521,7 @@ const shoes = [
   },
 
   {
-    id: K-37,
+    id: 'K-37',
     name: 'Nike Tanjun',
     price: 60,
     salePrice: 50.97,
@@ -1534,7 +1532,7 @@ const shoes = [
   },
  
   {
-    id: K-38,
+    id: 'K-38',
     name: 'Nike Air Zoom Pegasus 35',
     price: 90,
     salePrice: 75.97,
@@ -1545,7 +1543,7 @@ const shoes = [
   },
  
   {
-    id: K-39,
+    id: 'K-39',
     name: 'Nike Viale SE',
     price: 60,
     salePrice: 44.97,
@@ -1556,7 +1554,7 @@ const shoes = [
   },
  
   {
-    id: K-40,
+    id: 'K-40',
     name: 'Nike Star Runner',
     price: 48,
     salePrice: null,
@@ -1567,7 +1565,7 @@ const shoes = [
   },
 
   {
-    id: K-41,
+    id: 'K-41',
     name: 'Nike Air Max Sequent 4',
     price: 70,
     salePrice: 55.97,
@@ -1578,7 +1576,7 @@ const shoes = [
   },
  
   {
-    id: K-42,
+    id: 'K-42',
     name: 'Nike Legend',
     price: 75,
     salePrice: 62.97,
@@ -1589,7 +1587,7 @@ const shoes = [
   },
  
   {
-    id: K-43,
+    id: 'K-43',
     name: 'Nike Flex Contact',
     price: 65,
     salePrice: 54.97,
@@ -1600,7 +1598,7 @@ const shoes = [
   },
  
   {
-    id: K-44,
+    id: 'K-44',
     name: 'Nike Woodside 2 High',
     price: 65,
     salePrice: null,
@@ -1611,7 +1609,7 @@ const shoes = [
   },
 
   {
-    id: K-45,
+    id: 'K-45',
     name: 'Nike Manoa',
     price: 80,
     salePrice: null,
@@ -1622,7 +1620,7 @@ const shoes = [
   },
  
   {
-    id: K-46,
+    id: 'K-46',
     name: 'Nike Manoa Print',
     price: 85,
     salePrice: 71.97,
@@ -1633,7 +1631,7 @@ const shoes = [
   },
  
   {
-    id: K-47,
+    id: 'K-47',
     name: 'Nike Manoa SE',
     price: 80,
     salePrice: 67.97,
@@ -1644,7 +1642,7 @@ const shoes = [
   },
 
   {
-    id: K-48,
+    id: 'K-48',
     name: 'Nike Air Max 1',
     price: 85,
     salePrice: 54.97,
@@ -1655,7 +1653,7 @@ const shoes = [
   },
  
   {
-    id: K-49,
+    id: 'K-49',
     name: 'Nike Air Huarache Gripp Shield',
     price: 130,
     salePrice: 110.97,
@@ -1666,7 +1664,7 @@ const shoes = [
   },
  
   {
-    id: K-50,
+    id: 'K-50',
     name: 'Nike Huarache Extreme',
     price: 90,
     salePrice: null,
