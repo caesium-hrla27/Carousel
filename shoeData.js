@@ -67,11 +67,7 @@ const shoes = [
     reviewsAvg: 5,
     category: 'men_athletic'
   },             
-<<<<<<< HEAD:shoeData.js
- 
-=======
-  
->>>>>>> master:dummyData.js
+
   {
     id: 'M-7',
     name: 'Nike Air Precision II FlyEase',
@@ -83,11 +79,7 @@ const shoes = [
     category: 'men_athletic'
   },             
   
-<<<<<<< HEAD:shoeData.js
   {
-=======
-   {
->>>>>>> master:dummyData.js
     id: 'M-8',
     name: 'Air Jordan Future',
     price: 150,
@@ -97,12 +89,7 @@ const shoes = [
     reviewsAvg: 3,
     category: 'men_athletic'
   },       
-  
-<<<<<<< HEAD:shoeData.js
   {
-=======
-   {
->>>>>>> master:dummyData.js
     id: 'M-9',
     name: 'Jordan Melo 1.5 SE',
     price: 140,
@@ -112,12 +99,7 @@ const shoes = [
     reviewsAvg: 4,
     category: 'men_athletic'
   },       
-  
-<<<<<<< HEAD:shoeData.js
   {
-=======
-   {
->>>>>>> master:dummyData.js
     id: 'M-10',
     name: 'Nike Zoom KD11 BHM',
     price: 150,
@@ -128,13 +110,8 @@ const shoes = [
     category: 'men_athletic'
   },             
   
-<<<<<<< HEAD:shoeData.js
   {
-    id: 'M-11',
-=======
-   {
-   id: 'M-11', 
->>>>>>> master:dummyData.js
+    id: 'M-11', 
     name: 'Air Jordan 1 Mid SE',
     price: 120,
     salePrice: null,
@@ -143,12 +120,8 @@ const shoes = [
     reviewsAvg: 5,
     category: 'men_athletic'
   },             
- 
-<<<<<<< HEAD:shoeData.js
-  {
-=======
-   {
->>>>>>> master:dummyData.js
+
+  { 
     id: 'M-12',
     name: 'Kyrie 5',
     price: 130,
@@ -159,11 +132,7 @@ const shoes = [
     category: 'men_athletic'
   },         
  
-<<<<<<< HEAD:shoeData.js
   {
-=======
-   {
->>>>>>> master:dummyData.js
     id: 'M-13',
     name: 'Air Jordan XXXIII',
     price: 175,
@@ -174,11 +143,7 @@ const shoes = [
     category: 'men_athletic'
   },   
  
-<<<<<<< HEAD:shoeData.js
   {
-=======
-   {
->>>>>>> master:dummyData.js
     id: 'M-14',
     name: 'Kobe AD',
     price: 140,
@@ -279,13 +244,8 @@ const shoes = [
  
   {
     id: 'M-23',
-<<<<<<< HEAD:shoeData.js
     name: 'Jordan Westbrook 0.3',
     price: 100,
-=======
-    name: 'Jordan "Why Not?" Zer0.2',
-    price: 125,
->>>>>>> master:dummyData.js
     salePrice: null,
     shoeUrl: 'https://s3.us-east-2.amazonaws.com/carousel-fec/M-A-JORDAN-WESTBROOK-0.3.jpeg',
     reviewsNum: null,
@@ -1147,10 +1107,6 @@ const shoes = [
     reviewsAvg: null,
     category: 'women_athletic'
   },
-<<<<<<< HEAD:shoeData.js
-
-=======
->>>>>>> master:dummyData.js
   // KID'S SHOES
   // BOYS - Big Kids' Shoe
 
@@ -1254,11 +1210,7 @@ const shoes = [
   },
 
   {
-<<<<<<< HEAD:shoeData.js
     id: 'K-10',
-=======
-    id: 'K-1',
->>>>>>> master:dummyData.js
     name: 'Nike Air Max 270 Y2K',
     price: 125,
     salePrice: null,
@@ -1269,11 +1221,7 @@ const shoes = [
   },
 
   {
-<<<<<<< HEAD:shoeData.js
     id: 'K-11',
-=======
-    id: 'K-1',
->>>>>>> master:dummyData.js
     name: 'Nike Air Max 90 Leather',
     price: 70,
     salePrice: null,
@@ -1447,10 +1395,7 @@ const shoes = [
     reviewsAvg: null,
     category: 'kids_boys'
   },
-<<<<<<< HEAD:shoeData.js
 
-=======
->>>>>>> master:dummyData.js
   //GIRLS SHOES
   
   {
