@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Shoe from './Shoe.jsx';
+import Reviews from './Reviews.jsx';
 import styled from 'styled-components';
 
 import { GlobalStyles, Wrapper, Ul, Div, ButtonLeft, ButtonRight, Bar, DivBar } from './style.js';
@@ -14,6 +15,7 @@ class Carousel extends Component {
       position: 0,
       sliding: false,
       clickPosition: 0,
+      isHovering: false
     };
     this.getRandomColor = this.getRandomColor.bind(this);
     this.getRecommendations = this.getRecommendations.bind(this);
@@ -21,6 +23,8 @@ class Carousel extends Component {
     this.nextSlide = this.nextSlide.bind(this);
     this.prevSlide = this.prevSlide.bind(this);
     this.slideCarousel = this.slideCarousel.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
   }
 
   componentDidMount() {
@@ -115,10 +119,24 @@ class Carousel extends Component {
       });
     }, 50);    
   }
-  
+
+  handleMouseEnter(reviewsNum) {
+    if (reviewsNum) {
+      this.setState({
+        isHovering: true
+      }, () => console.log('MouseEnter', this.state.isHovering));
+    }
+  }  
+
+  handleMouseLeave() {
+    this.setState({
+      isHovering: false
+    }, () => console.log('MouseLeave', this.state.isHovering));
+  }
+
   render() {
     const { sliding, direction, position, clickPosition } = this.state;
-    console.log('this is the indicator position', clickPosition);
+    // console.log('this is the indicator position', clickPosition);
     return (
       <Wrapper>
         <GlobalStyles />
@@ -135,7 +153,12 @@ class Carousel extends Component {
               price={shoe.price} 
               shoeUrl={shoe.shoeUrl} 
               category={shoe.category} 
-              color={this.getRandomColor} />;
+              color={this.getRandomColor} 
+              reviewsNum={shoe.reviewsNum}
+              reviewsAvg={shoe.reviewsAvg}
+              isHovering={this.state.isHovering}
+              mouseEnter={this.handleMouseEnter}
+              mouseLeave={this.handleMouseLeave} />;
           })
           }
         </Ul>

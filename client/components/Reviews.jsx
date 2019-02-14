@@ -6,7 +6,7 @@ const Reviews = (props) => {
 
   return (
     <div>
-      <div>Stars   Number of Stars</div>
+      <div>Stars: {props.reviewsNum}   Number of Stars: {props.reviewsAvg}</div>
     </div>
   );
 };
