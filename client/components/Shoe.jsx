@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Reviews from './Reviews.jsx';
+
 
 import { Li, Text, Color, ShoeDiv } from './style.js';
 
@@ -14,6 +16,7 @@ const Shoe = (props) => {
       <img src={props.shoeUrl} /><br />
       <Text>
         <ShoeDiv>
+          <Reviews />
           <Color>
             {randomColor} {randomColor === 1 ? 'Color' : 'Colors'}<br />
           </Color>
