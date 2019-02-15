@@ -82,7 +82,7 @@ export const Bar = styled.div`
   transition: ${(props) => props.clickPosition > 0 ? 'left 0.5s' : 'none'};
 
   left: ${(props) => {
-    console.log('this is the rightclick', props.clickPosition);
+    // console.log('this is the rightclick', props.clickPosition);
     return props.clickPosition === 1 ? '111px' : props.clickPosition === 2 ? '222px' : props.clickPosition === 3 ? '333px' : 
       props.clickPosition === 4 ? '444px' : props.clickPosition === 5 ? '555px' : props.clickPosition === 6 ? '666px' : 
         props.clickPosition === 7 ? '777px' : props.clickPosition === 8 ? '890px' : props.clickPosition === 9 ? '1000px' : '0px';
