@@ -5,34 +5,60 @@ import Reviews from './Reviews.jsx';
 
 import { Li, Text, Color, ShoeDiv, Prices, OrigPrice } from './style.js';
 
-const Shoe = (props) => {
+class Shoe extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isHovering: false
+    };
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
+  }
 
-  return (
+  handleMouseEnter(reviewsNum) {
+    if (reviewsNum) {
+      this.setState({
+        isHovering: true
+      });
+    }
+  }  
 
-    <Li order={props.order} onMouseEnter={() => props.mouseEnter(props.reviewsNum)} onMouseLeave={() => props.mouseLeave()}>
+  handleMouseLeave() {
+    this.setState({
+      isHovering: false
+    });
+  }
+
+  render() {
+    
+    return (
+
+      <Li order={this.props.order} onMouseEnter={() => this.handleMouseEnter(this.props.reviewsNum)} onMouseLeave={() => this.handleMouseLeave()}>
       
-      <img src={props.shoeUrl} /><br />
+        <img src={this.props.shoeUrl} /><br />
       
-      <Text>
+        <Text>
 
-        <ShoeDiv>
-          {props.reviewsNum && props.isHovering ? <Reviews reviewsNum={props.reviewsNum} reviewsAvg={props.reviewsAvg} /> : 
-            <Color>{props.colors} {props.colors === 1 ? 'Color' : 'Colors'}<br /></Color>} 
-          {props.name}<br />
-        </ShoeDiv>
-        {props.category === 'men_athletic' ? 'Basketball Shoe' : props.category}<br />
+          <ShoeDiv>
+            {this.props.reviewsNum && this.state.isHovering ? <Reviews reviewsNum={this.props.reviewsNum} reviewsAvg={this.props.reviewsAvg} /> : 
+              <Color>{this.props.colors} {this.props.colors === 1 ? 'Color' : 'Colors'}<br /></Color>} 
+            {this.props.name}<br />
+          </ShoeDiv>
+          {this.props.category === 'men_athletic' ? 'Basketball Shoe' : this.props.category}<br />
         
-        <Prices>
-          <OrigPrice origPrice={props.price} salePrice={props.salePrice}>
-            {`$${props.price}`}
-          </OrigPrice>
-          {props.salePrice ? `$${props.salePrice}` : null}<br />
-        </Prices>
+          <Prices>
+            <OrigPrice origPrice={this.props.price} salePrice={this.props.salePrice}>
+              {`$${this.props.price}`}
+            </OrigPrice>
+            {this.props.salePrice ? `$${this.props.salePrice}` : null}<br />
+          </Prices>
 
-      </Text>
-    </Li>
+        </Text>
+      </Li>
 
-  );
-};
+    );
+
+  }
+}
 
 export default Shoe;

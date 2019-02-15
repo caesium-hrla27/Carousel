@@ -15,15 +15,12 @@ class Carousel extends Component {
       position: 0,
       sliding: false,
       clickPosition: 0,
-      isHovering: false
     };
     this.getRecommendations = this.getRecommendations.bind(this);
     this.getOrder = this.getOrder.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.prevSlide = this.prevSlide.bind(this);
     this.slideCarousel = this.slideCarousel.bind(this);
-    this.handleMouseEnter = this.handleMouseEnter.bind(this);
-    this.handleMouseLeave = this.handleMouseLeave.bind(this);
   }
 
   componentDidMount() {
@@ -113,20 +110,6 @@ class Carousel extends Component {
     }, 50);    
   }
 
-  handleMouseEnter(reviewsNum) {
-    if (reviewsNum) {
-      this.setState({
-        isHovering: true
-      });
-    }
-  }  
-
-  handleMouseLeave() {
-    this.setState({
-      isHovering: false
-    });
-  }
-
   reviewsPercentage(reviewsNum) {
     return (reviewsNum / 5) * 100; 
   }
@@ -152,10 +135,7 @@ class Carousel extends Component {
               category={shoe.category} 
               colors={shoe.colors} 
               reviewsNum={shoe.reviewsNum}
-              reviewsAvg={shoe.reviewsAvg}
-              isHovering={this.state.isHovering}
-              mouseEnter={this.handleMouseEnter}
-              mouseLeave={this.handleMouseLeave} />;
+              reviewsAvg={shoe.reviewsAvg} />;
           })
           }
         </Ul>
