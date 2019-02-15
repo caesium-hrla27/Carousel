@@ -154,6 +154,7 @@ class Carousel extends Component {
               id={shoe.id} 
               name={shoe.name} 
               price={shoe.price} 
+              salePrice={shoe.salePrice}
               shoeUrl={shoe.shoeUrl} 
               category={shoe.category} 
               color={this.getRandomColor} 

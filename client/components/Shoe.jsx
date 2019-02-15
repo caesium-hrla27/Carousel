@@ -5,6 +5,21 @@ import Reviews from './Reviews.jsx';
 
 import { Li, Text, Color, ShoeDiv } from './style.js';
 
+const Div = styled.div`
+  display: flex;
+`;
+
+const OrigPrice = styled.div`
+  margin-right: 5px;
+  text-decoration: ${(props) => {
+    if (props.salePrice) {
+      return 'line-through';   
+    }
+  }}
+
+ `;
+
+
 const Shoe = (props) => {
 
   let randomColor = props.color();
@@ -19,7 +34,12 @@ const Shoe = (props) => {
           {props.name}<br />
         </ShoeDiv>
         {props.category === 'men_athletic' ? 'Basketball Shoe' : props.category}<br />
-        {`$${props.price}`}<br />
+        <Div>
+          <OrigPrice origPrice={props.price} salePrice={props.salePrice}>
+            {`$${props.price}`}
+          </OrigPrice>
+          {props.salePrice ? `$${props.salePrice}` : null}<br />
+        </Div>
       </Text>
     </Li>
   );
