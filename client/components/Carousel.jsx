@@ -11,7 +11,7 @@ class Carousel extends Component {
     super(props);
     this.state = {
       recommendations: [],
-      category: 'men_athletic',
+      categories: ['men_athletic', 'men_lifestyle', 'women_athletic', 'women_lifestyle', 'kids_boys', 'kids_girls'],
       position: 0,
       sliding: false,
       clickPosition: 0,
@@ -29,13 +29,15 @@ class Carousel extends Component {
 
   // when sending a get request, will need the category name I'm looking for, then send that category name to get shoes are matching that category name
   getRecommendations() {
-    const {category} = this.state;
+    const {categories} = this.state;
+    const randIndex = Math.floor(Math.random() * 6);
+    const category = categories[randIndex];
     
     axios
       .get('/api/shoeList', { params: {category}})
       .then(({data}) => {
         this.setState({
-          recommendations: data
+          recommendations: data,
         });
       }, () => console.log('Success getting shoes and setting state'))
       .catch(err => console.log('Unable to get recommendations', err));

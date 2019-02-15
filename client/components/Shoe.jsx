@@ -30,6 +30,7 @@ class Shoe extends Component {
   }
 
   render() {
+    console.log('This is the shoe\'s category', this.props.category);
     
     return (
 
@@ -44,7 +45,10 @@ class Shoe extends Component {
               <Color>{this.props.colors} {this.props.colors === 1 ? 'Color' : 'Colors'}<br /></Color>} 
             {this.props.name}<br />
           </ShoeDiv>
-          {this.props.category === 'men_athletic' ? 'Basketball Shoe' : this.props.category}<br />
+          
+          {this.props.category === 'men_athletic' ? 'Basketball Shoe' : this.props.category === 'men_lifestyle' ? 'Men\'s Shoe' : 
+            this.props.category === 'women_athletic' ? 'Women\'s Running Shoe' : this.props.category === 'women_lifestyle' ? 'Women\'s Shoe' : 
+              this.props.category === 'kids_boys' || this.props.category === 'kids_girls' ? 'Big Kids\' Shoe' : null}<br />
         
           <Prices>
             <OrigPrice origPrice={this.props.price} salePrice={this.props.salePrice}>
