@@ -169,8 +169,8 @@ export const StarRatingsBottom = styled.div`
   left: 0;
   white-space: nowrap;
   overflow: hidden;
-  width: ${(props) => {
-    let starsNum = (props.reviewsAvg / 5) * 100;
+    width: ${(props) => {
+    let starsNum = ((props.reviewsAvg / 5) * 100) - 10;
     return `${starsNum}%`;   
   }}
 

@@ -39,7 +39,7 @@ let getRecommendedShoes = (category) => {
   return Shoe.find({ category: category }).limit(12);
 };
 
-save(shoeData.shoes);
+// save(shoeData.shoes);
 
 module.exports = { 
   Shoe,
