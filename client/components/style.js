@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
-// PARENT COMPONENT STYLES
+// CAROUSEL STYLES
 
 export const GlobalStyles = createGlobalStyle`
   body {
@@ -100,7 +100,7 @@ export const DivBar = styled.div`
   border-radius: 2px;
 `;
 
-// CHILD COMPONENT STYLES
+// SHOE STYLES
 
 export const Li = styled.li`
   flex: 1 0 30%;
@@ -124,6 +124,21 @@ export const ShoeDiv = styled.div`
   color: black;
   margin-bottom: 
 `;
+
+export const Prices = styled.div`
+  display: flex;
+`;
+
+export const OrigPrice = styled.div`
+  margin-right: 5px;
+  text-decoration: ${(props) => {
+    if (props.salePrice) {
+      return 'line-through';   
+    }
+  }}
+
+ `;
+
 
 // REVIEWS STYLES
 

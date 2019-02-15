@@ -3,22 +3,7 @@ import styled from 'styled-components';
 import Reviews from './Reviews.jsx';
 
 
-import { Li, Text, Color, ShoeDiv } from './style.js';
-
-const Div = styled.div`
-  display: flex;
-`;
-
-const OrigPrice = styled.div`
-  margin-right: 5px;
-  text-decoration: ${(props) => {
-    if (props.salePrice) {
-      return 'line-through';   
-    }
-  }}
-
- `;
-
+import { Li, Text, Color, ShoeDiv, Prices, OrigPrice } from './style.js';
 
 const Shoe = (props) => {
 
@@ -34,12 +19,12 @@ const Shoe = (props) => {
           {props.name}<br />
         </ShoeDiv>
         {props.category === 'men_athletic' ? 'Basketball Shoe' : props.category}<br />
-        <Div>
+        <Prices>
           <OrigPrice origPrice={props.price} salePrice={props.salePrice}>
             {`$${props.price}`}
           </OrigPrice>
           {props.salePrice ? `$${props.salePrice}` : null}<br />
-        </Div>
+        </Prices>
       </Text>
     </Li>
   );
