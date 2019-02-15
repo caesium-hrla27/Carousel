@@ -7,8 +7,6 @@ import { Li, Text, Color, ShoeDiv, Prices, OrigPrice } from './style.js';
 
 const Shoe = (props) => {
 
-  let randomColor = props.color();
-
   return (
 
     <Li order={props.order} onMouseEnter={() => props.mouseEnter(props.reviewsNum)} onMouseLeave={() => props.mouseLeave()}>
@@ -19,7 +17,7 @@ const Shoe = (props) => {
 
         <ShoeDiv>
           {props.reviewsNum && props.isHovering ? <Reviews reviewsNum={props.reviewsNum} reviewsAvg={props.reviewsAvg} /> : 
-            <Color>{randomColor} {randomColor === 1 ? 'Color' : 'Colors'}<br /></Color>} 
+            <Color>{props.colors} {props.colors === 1 ? 'Color' : 'Colors'}<br /></Color>} 
           {props.name}<br />
         </ShoeDiv>
         {props.category === 'men_athletic' ? 'Basketball Shoe' : props.category}<br />
