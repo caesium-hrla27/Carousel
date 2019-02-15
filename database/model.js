@@ -7,6 +7,7 @@ let shoesSchema = new mongoose.Schema({
   price: { type: Number, require: true },
   salePrice: { type: Number },
   shoeUrl: { type: String, require: true },
+  colors: { type: Number, require: true},
   reviewsNum: { type: Number },
   reviewsAvg: { type: Number },
   category: { type: String, require: true }
@@ -23,6 +24,7 @@ let save = (shoes) => {
       price: shoe.price,
       salePrice: shoe.salePrice,
       shoeUrl: shoe.shoeUrl,
+      colors: shoe.colors,
       reviewsNum: shoe.reviewsNum,
       reviewsAvg: shoe.reviewsAvg,
       category: shoe.category
@@ -37,7 +39,7 @@ let getRecommendedShoes = (category) => {
   return Shoe.find({ category: category }).limit(12);
 };
 
-// save(shoeData.shoes);
+save(shoeData.shoes);
 
 module.exports = { 
   Shoe,

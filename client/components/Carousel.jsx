@@ -17,7 +17,6 @@ class Carousel extends Component {
       clickPosition: 0,
       isHovering: false
     };
-    this.getRandomColor = this.getRandomColor.bind(this);
     this.getRecommendations = this.getRecommendations.bind(this);
     this.getOrder = this.getOrder.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
@@ -43,12 +42,6 @@ class Carousel extends Component {
         });
       }, () => console.log('Success getting shoes and setting state'))
       .catch(err => console.log('Unable to get recommendations', err));
-  }
-
-
-  getRandomColor() {
-    let randomNum = Math.ceil(Math.random() * 10);
-    return randomNum;
   }
 
   getOrder(index) {
@@ -157,7 +150,7 @@ class Carousel extends Component {
               salePrice={shoe.salePrice}
               shoeUrl={shoe.shoeUrl} 
               category={shoe.category} 
-              color={this.getRandomColor} 
+              colors={shoe.colors} 
               reviewsNum={shoe.reviewsNum}
               reviewsAvg={shoe.reviewsAvg}
               isHovering={this.state.isHovering}
