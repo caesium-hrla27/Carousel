@@ -124,19 +124,22 @@ class Carousel extends Component {
     if (reviewsNum) {
       this.setState({
         isHovering: true
-      }, () => console.log('MouseEnter', this.state.isHovering));
+      });
     }
   }  
 
   handleMouseLeave() {
     this.setState({
       isHovering: false
-    }, () => console.log('MouseLeave', this.state.isHovering));
+    });
+  }
+
+  reviewsPercentage(reviewsNum) {
+    return (reviewsNum / 5) * 100; 
   }
 
   render() {
     const { sliding, direction, position, clickPosition } = this.state;
-    // console.log('this is the indicator position', clickPosition);
     return (
       <Wrapper>
         <GlobalStyles />
