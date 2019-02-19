@@ -1,13 +1,13 @@
 import React from 'react';
 import expect from 'expect';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Carousel from '../client/components/Carousel.jsx';
 
 describe('Carousel', () => {
   let carousel;
 
   before(() => {
-    carousel = shallow(Carousel);
+    carousel = shallow(<Carousel />);
   });
 
   it('Carousel renders nested unordered list', () => {
