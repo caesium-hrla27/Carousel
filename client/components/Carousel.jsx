@@ -49,7 +49,7 @@ class Carousel extends Component {
 
     if (index - position > 0) {
       return index - position;
-    }
+    } 
     if (index - position < 0) {
       return numItems - Math.abs(index - position);
     }
@@ -129,7 +129,6 @@ class Carousel extends Component {
             return <Shoe 
               key={index}
               order={this.getOrder(index)}
-              id={shoe.id} 
               name={shoe.name} 
               price={shoe.price} 
               salePrice={shoe.salePrice}

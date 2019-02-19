@@ -30,7 +30,6 @@ class Shoe extends Component {
   }
 
   render() {
-    console.log('This is the shoe\'s category', this.props.category);
     
     return (
 
