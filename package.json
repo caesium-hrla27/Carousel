@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch",
     "start": "nodemon ./server/index.js",
     "build": "webpack --watch",
     "seed": "./database/model.js"
@@ -40,9 +41,12 @@
     "webpack-cli": "^3.2.3"
   },
   "devDependencies": {
+    "babel-jest": "^24.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "enzyme-to-json": "^3.3.5",
     "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor",
     "jest": "^24.1.0",
-    "babel-jest": "^24.1.0",
     "react-test-renderer": "^16.8.1"
   },
   "jest": {

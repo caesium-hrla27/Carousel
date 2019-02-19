@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Shoe from './Shoe.jsx';
-import Reviews from './Reviews.jsx';
 import styled from 'styled-components';
 
 import { GlobalStyles, Wrapper, Ul, Div, ButtonLeft, ButtonRight, Bar, DivBar } from './style.js';
@@ -117,11 +116,11 @@ class Carousel extends Component {
   }
 
   render() {
-    const { sliding, direction, position, clickPosition } = this.state;
+    const { sliding, direction, position, clickPosition, recommendations } = this.state;
     return (
       <Wrapper>
         <GlobalStyles />
-        <Div>
+        <Div id="image">
           <img src="https://s3.us-east-2.amazonaws.com/carousel-fec/youMay.png"></img>
         </Div>
         <Ul sliding={sliding} direction={direction}>
