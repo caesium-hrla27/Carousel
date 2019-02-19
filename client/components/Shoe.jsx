@@ -34,7 +34,7 @@ class Shoe extends Component {
     return (
 
       <Li order={this.props.order} onMouseEnter={() => this.handleMouseEnter(this.props.reviewsNum)} onMouseLeave={() => this.handleMouseLeave()}>
-      
+        
         <img src={this.props.shoeUrl} /><br />
       
         <Text>
