@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors",
     "start": "nodemon ./server/index.js",
     "build": "webpack --watch",
     "seed": "./database/model.js"
@@ -22,12 +23,7 @@
   },
   "homepage": "https://github.com/caesium-hrla27/Carousel#readme",
   "dependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-es2015": "^7.0.0-beta.53",
-    "@babel/preset-react": "^7.0.0",
     "axios": "^0.18.0",
-    "babel-loader": "^8.0.5",
     "body-parser": "^1.18.3",
     "eslint": "^5.13.0",
     "eslint_d": "^7.2.0",
@@ -41,7 +37,14 @@
     "webpack-cli": "^3.2.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-syntax-class-properties": "^6.13.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "enzyme-to-json": "^3.3.5",
@@ -50,14 +53,8 @@
     "react-test-renderer": "^16.8.1"
   },
   "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "jsx"
-    ],
-    "moduleDirectories": [
-      "node_modules",
-      "bower_components",
-      "shared"
-    ]
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   }
 }
