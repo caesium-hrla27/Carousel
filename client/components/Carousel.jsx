@@ -29,12 +29,12 @@ class Carousel extends Component {
 
   // when sending a get request, will need the category name I'm looking for, then send that category name to get shoes are matching that category name
   getRecommendations() {
-    const {categories} = this.state;
-    const randIndex = Math.floor(Math.random() * 5);
-    const category = categories[randIndex];
+    // const {categories} = this.state;
+    const id = Math.floor(Math.random() * 150);
+    // const category = categories[randIndex];
     
     axios
-      .get('/api/shoeList', { params: {category}})
+      .get('/api/shoeList', { params: {id}})
       .then(({data}) => {
         this.setState({
           recommendations: data,

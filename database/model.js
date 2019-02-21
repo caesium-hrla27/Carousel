@@ -35,8 +35,9 @@ let save = (shoes) => {
   });
 };
 
-let getRecommendedShoes = (category) => {
-  return Shoe.find({ category: category }).limit(12);
+let getRecommendedShoes = (id) => {
+  // need to have some logic to find 25 shoes where category matches the category of the id
+  return Shoe.find({   }).limit(25);
 };
 
 // save(shoeData.shoes);
