@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Shoe from './Shoe.jsx';
+import Indicator from './Indicator.jsx';
 import styled from 'styled-components';
 
-import { GlobalStyles, Wrapper, Ul, Div, ButtonLeft, ButtonRight, Bar, DivBar } from './style.js';
+import { GlobalStyles, Wrapper, Ul, Div, ButtonLeft, ButtonRight } from './style.js';
 
 class Carousel extends Component {
   constructor(props) {
@@ -141,12 +142,7 @@ class Carousel extends Component {
         </Ul>
         {position !== 9 ? <ButtonRight onClick={ () => this.nextSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonRight> : null}
         {position !== 0 ? <ButtonLeft onClick={ () => this.prevSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonLeft> : null}
-        <div id="indicator">
-          <DivBar>
-            <Bar clickPosition={clickPosition}>
-            </Bar>
-          </DivBar>
-        </div>
+        <Indicator clickPosition={clickPosition} />
       </Wrapper>
     );
   }

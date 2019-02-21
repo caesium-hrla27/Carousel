@@ -74,7 +74,7 @@ export const ButtonRight = styled.button`
   } 
 `;
 
-export const Bar = styled.div`
+export const Slider = styled.div`
   width: 28%;
   border-bottom: 2px solid black;
   z-index: 2;
@@ -91,7 +91,7 @@ export const Bar = styled.div`
 `;
 
 
-export const DivBar = styled.div`
+export const Track = styled.div`
   position: relative;
   width: 95%;
   margin: 40px 30px 40px 30px;  
