@@ -118,12 +118,12 @@ class Carousel extends Component {
   render() {
     const { sliding, direction, position, clickPosition, recommendations } = this.state;
     return (
-      <Wrapper>
+      <Wrapper id="wrapper">
         <GlobalStyles />
-        <Div id="image">
+        <Div>
           <img src="https://s3.us-east-2.amazonaws.com/carousel-fec/youMay.png"></img>
         </Div>
-        <Ul sliding={sliding} direction={direction}>
+        <Ul id="ul" sliding={sliding} direction={direction}>
           {this.state.recommendations.map((shoe, index) => {
             return <Shoe 
               key={index}
