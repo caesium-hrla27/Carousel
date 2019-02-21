@@ -4,7 +4,7 @@ const path = require('path');
 const routes = require('./routes.js');
 const db = require('../database/index.js');
 
-const PORT = 3000;
+const PORT = 3004;
 
 const app = express();
 
