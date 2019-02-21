@@ -4,7 +4,7 @@ import Shoe from './Shoe.jsx';
 import Indicator from './Indicator.jsx';
 import styled from 'styled-components';
 
-import { GlobalStyles, Wrapper, Ul, Div, ButtonLeft, ButtonRight } from './style.js';
+import { GlobalStyles, Wrapper, Ul, Img, ButtonLeft, ButtonRight } from './style.js';
 
 class Carousel extends Component {
   constructor(props) {
@@ -112,18 +112,17 @@ class Carousel extends Component {
     }, 50);    
   }
 
-  reviewsPercentage(reviewsNum) {
-    return (reviewsNum / 5) * 100; 
-  }
-
   render() {
     const { sliding, direction, position, clickPosition, recommendations } = this.state;
     return (
       <Wrapper id="wrapper">
+        
         <GlobalStyles />
-        <Div>
+        
+        <Img>
           <img src="https://s3.us-east-2.amazonaws.com/carousel-fec/youMay.png"></img>
-        </Div>
+        </Img>
+        
         <Ul id="ul" sliding={sliding} direction={direction}>
           {this.state.recommendations.map((shoe, index) => {
             return <Shoe 
@@ -140,9 +139,12 @@ class Carousel extends Component {
           })
           }
         </Ul>
+        
         {position !== 9 ? <ButtonRight onClick={ () => this.nextSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonRight> : null}
-        {position !== 0 ? <ButtonLeft onClick={ () => this.prevSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonLeft> : null}
+        {position !== 0 ? <ButtonLeft click={ () => this.prevSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonLeft> : null}
+        
         <Indicator clickPosition={clickPosition} />
+      
       </Wrapper>
     );
   }

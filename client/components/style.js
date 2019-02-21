@@ -4,8 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   body {
-    @import url('https://fonts.googleapis.com/css?family=Heebo');
-    font-family: 'Heebo', sans-serif;
+    font-family: “Helvetica Neue”,Helvetica,Arial,sans-serif;
   }
 `;
 
@@ -31,7 +30,7 @@ export const Ul = styled.ul`
   }}
 `;
 
-export const Div = styled.div`
+export const Img = styled.div`
   width: 100%;
   padding: 0px 25px;
 `;
@@ -125,7 +124,12 @@ export const ShoeDiv = styled.div`
   margin-bottom: 
 `;
 
+export const CategoryDiv = styled.div`
+  margin: 7px 0px 7px 0px; 
+`;
+
 export const Prices = styled.div`
+  margin: 7px 0px 7px 0px;
   display: flex;
 `;
 
