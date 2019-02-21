@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+
+import Svg from './Svg.jsx';
 import Shoe from './Shoe.jsx';
 import Indicator from './Indicator.jsx';
 import styled from 'styled-components';
@@ -16,11 +18,9 @@ class Carousel extends Component {
       sliding: false,
       clickPosition: 0,
     };
-    this.getRecommendations = this.getRecommendations.bind(this);
     this.getOrder = this.getOrder.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.prevSlide = this.prevSlide.bind(this);
-    this.slideCarousel = this.slideCarousel.bind(this);
   }
 
   componentDidMount() {
@@ -113,7 +113,9 @@ class Carousel extends Component {
   }
 
   render() {
+    
     const { sliding, direction, position, clickPosition, recommendations } = this.state;
+    
     return (
       <Wrapper id="wrapper">
         
@@ -125,23 +127,19 @@ class Carousel extends Component {
         
         <Ul id="ul" sliding={sliding} direction={direction}>
           {this.state.recommendations.map((shoe, index) => {
+            
             return <Shoe 
               key={index}
               order={this.getOrder(index)}
-              name={shoe.name} 
-              price={shoe.price} 
-              salePrice={shoe.salePrice}
-              shoeUrl={shoe.shoeUrl} 
-              category={shoe.category} 
-              colors={shoe.colors} 
-              reviewsNum={shoe.reviewsNum}
-              reviewsAvg={shoe.reviewsAvg} />;
+              data={shoe}
+            />;
           })
+          
           }
         </Ul>
         
-        {position !== 9 ? <ButtonRight onClick={ () => this.nextSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonRight> : null}
-        {position !== 0 ? <ButtonLeft click={ () => this.prevSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonLeft> : null}
+        {position !== 9 ? <ButtonRight onClick={ () => this.nextSlide() }><Svg /></ButtonRight> : null}
+        {position !== 0 ? <ButtonLeft onClick={ () => this.prevSlide() }><Svg /></ButtonLeft> : null}
         
         <Indicator clickPosition={clickPosition} />
       

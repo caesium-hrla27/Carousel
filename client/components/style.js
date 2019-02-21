@@ -128,7 +128,7 @@ export const CategoryDiv = styled.div`
   margin: 7px 0px 7px 0px; 
 `;
 
-export const Prices = styled.div`
+export const PricesDiv = styled.div`
   margin: 7px 0px 7px 0px;
   display: flex;
 `;
