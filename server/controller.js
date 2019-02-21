@@ -8,6 +8,8 @@ module.exports = {
     
     const {category} = req.query;
 
+    console.log('This is the category', category);
+
     getRecommendedShoes(category)
       .then(shoes => {
         res.status(200).send(shoes);

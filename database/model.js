@@ -36,7 +36,7 @@ let save = (shoes) => {
 };
 
 let getRecommendedShoes = (category) => {
-  return Shoe.find({ category: category }).limit(12);
+  return Shoe.find({ category: category }).limit(25);
 };
 
 // save(shoeData.shoes);
