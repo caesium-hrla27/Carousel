@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Carousel /> renders the component 1`] = `
+exports[`Carousel should render properly 1`] = `
 <StyledComponent
   forwardedComponent={
     Object {
@@ -27,16 +27,16 @@ exports[`<Carousel /> renders the component 1`] = `
     }
   }
   forwardedRef={null}
+  id="wrapper"
 >
   <GlobalStyleComponent />
-  <styled.div
-    id="image"
-  >
+  <styled.div>
     <img
       src="https://s3.us-east-2.amazonaws.com/carousel-fec/youMay.png"
     />
   </styled.div>
   <styled.ul
+    id="ul"
     sliding={false}
   />
   <styled.button

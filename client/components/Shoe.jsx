@@ -33,13 +33,13 @@ class Shoe extends Component {
     
     return (
 
-      <Li order={this.props.order} onMouseEnter={() => this.handleMouseEnter(this.props.reviewsNum)} onMouseLeave={() => this.handleMouseLeave()}>
+      <Li id="li" order={this.props.order} onMouseEnter={() => this.handleMouseEnter(this.props.reviewsNum)} onMouseLeave={() => this.handleMouseLeave()}>
         
         <img src={this.props.shoeUrl} /><br />
       
-        <Text>
+        <Text id="text">
 
-          <ShoeDiv>
+          <ShoeDiv id="shoeText">
             {this.props.reviewsNum && this.state.isHovering ? <Reviews reviewsNum={this.props.reviewsNum} reviewsAvg={this.props.reviewsAvg} /> : 
               <Color>{this.props.colors} {this.props.colors === 1 ? 'Color' : 'Colors'}<br /></Color>} 
             {this.props.name}<br />
@@ -49,7 +49,7 @@ class Shoe extends Component {
             this.props.category === 'women_athletic' ? 'Women\'s Running Shoe' : this.props.category === 'women_lifestyle' ? 'Women\'s Shoe' : 
               this.props.category === 'kids_boys' || this.props.category === 'kids_girls' ? 'Big Kids\' Shoe' : null}<br />
         
-          <Prices>
+          <Prices id="shoePrices">
             <OrigPrice origPrice={this.props.price} salePrice={this.props.salePrice}>
               {`$${this.props.price}`}
             </OrigPrice>

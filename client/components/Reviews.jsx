@@ -7,9 +7,9 @@ const Reviews = (props) => {
 
   return (
     <div>
-      <StylesDiv>
-        <StarRatingsTop>
-          <StarRatingsBottom reviewsAvg={props.reviewsAvg}></StarRatingsBottom> ({props.reviewsNum})
+      <StylesDiv id="stylesDiv">
+        <StarRatingsTop id="grayStars">
+          <StarRatingsBottom id="avgStars" reviewsAvg={props.reviewsAvg}></StarRatingsBottom> ({props.reviewsNum})
         </StarRatingsTop>
       </StylesDiv>
     </div>
