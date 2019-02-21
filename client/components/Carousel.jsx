@@ -1,25 +1,26 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+
+import Svg from './Svg.jsx';
 import Shoe from './Shoe.jsx';
+import Indicator from './Indicator.jsx';
 import styled from 'styled-components';
 
-import { GlobalStyles, Wrapper, Ul, Div, ButtonLeft, ButtonRight, Bar, DivBar } from './style.js';
+import { GlobalStyles, Wrapper, Ul, Img, ButtonLeft, ButtonRight } from '../styles/Carousel.style.js';
 
 class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
       recommendations: [],
-      categories: ['men_athletic', 'men_lifestyle', 'women_athletic', 'women_lifestyle', 'kids_boys', 'kids_girls'],
+      categories: ['Basketball Shoe', 'Men\'s Shoe', 'Women\'s Running Shoe', 'Women\'s Shoe', 'Big Kids\' Shoe'],
       position: 0,
       sliding: false,
       clickPosition: 0,
     };
-    this.getRecommendations = this.getRecommendations.bind(this);
     this.getOrder = this.getOrder.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.prevSlide = this.prevSlide.bind(this);
-    this.slideCarousel = this.slideCarousel.bind(this);
   }
 
   componentDidMount() {
@@ -29,7 +30,7 @@ class Carousel extends Component {
   // when sending a get request, will need the category name I'm looking for, then send that category name to get shoes are matching that category name
   getRecommendations() {
     const {categories} = this.state;
-    const randIndex = Math.floor(Math.random() * 6);
+    const randIndex = Math.floor(Math.random() * 5);
     const category = categories[randIndex];
     
     axios
@@ -111,42 +112,37 @@ class Carousel extends Component {
     }, 50);    
   }
 
-  reviewsPercentage(reviewsNum) {
-    return (reviewsNum / 5) * 100; 
-  }
-
   render() {
+    
     const { sliding, direction, position, clickPosition, recommendations } = this.state;
+    
     return (
       <Wrapper id="wrapper">
+        
         <GlobalStyles />
-        <Div>
+        
+        <Img>
           <img src="https://s3.us-east-2.amazonaws.com/carousel-fec/youMay.png"></img>
-        </Div>
+        </Img>
+        
         <Ul id="ul" sliding={sliding} direction={direction}>
           {this.state.recommendations.map((shoe, index) => {
+            
             return <Shoe 
               key={index}
               order={this.getOrder(index)}
-              name={shoe.name} 
-              price={shoe.price} 
-              salePrice={shoe.salePrice}
-              shoeUrl={shoe.shoeUrl} 
-              category={shoe.category} 
-              colors={shoe.colors} 
-              reviewsNum={shoe.reviewsNum}
-              reviewsAvg={shoe.reviewsAvg} />;
+              data={shoe}
+            />;
           })
+          
           }
         </Ul>
-        {position !== 9 ? <ButtonRight onClick={ () => this.nextSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonRight> : null}
-        {position !== 0 ? <ButtonLeft onClick={ () => this.prevSlide() }><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg></ButtonLeft> : null}
-        <div id="indicator">
-          <DivBar>
-            <Bar clickPosition={clickPosition}>
-            </Bar>
-          </DivBar>
-        </div>
+        
+        {position !== 9 ? <ButtonRight onClick={ () => this.nextSlide() }><Svg /></ButtonRight> : null}
+        {position !== 0 ? <ButtonLeft onClick={ () => this.prevSlide() }><Svg /></ButtonLeft> : null}
+        
+        <Indicator clickPosition={clickPosition} />
+      
       </Wrapper>
     );
   }

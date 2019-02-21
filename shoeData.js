@@ -11,7 +11,7 @@ const shoes = [
     colors: 1,
     reviewsNum: 10,
     reviewsAvg: 4,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   }, 
  
   {
@@ -23,7 +23,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },       
  
   {
@@ -35,7 +35,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },     
  
   {
@@ -47,7 +47,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },  
  
   {
@@ -59,7 +59,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },       
  
   {
@@ -71,7 +71,7 @@ const shoes = [
     colors: 1,
     reviewsNum: 1,
     reviewsAvg: 5,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },             
 
   {
@@ -83,7 +83,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },             
   
   {
@@ -95,7 +95,7 @@ const shoes = [
     colors: 1,
     reviewsNum: 2,
     reviewsAvg: 3,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },       
   {
     id: 'M-9',
@@ -106,7 +106,7 @@ const shoes = [
     colors: 1,
     reviewsNum: 1,
     reviewsAvg: 4,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },       
   {
     id: 'M-10',
@@ -117,7 +117,7 @@ const shoes = [
     colors: 4,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },             
   
   {
@@ -129,7 +129,7 @@ const shoes = [
     colors: 4,
     reviewsNum: 2,
     reviewsAvg: 5,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },             
 
   { 
@@ -141,7 +141,7 @@ const shoes = [
     colors: 1,
     reviewsNum: 17,
     reviewsAvg: 4,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },         
  
   {
@@ -153,7 +153,7 @@ const shoes = [
     colors: 6,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },   
  
   {
@@ -165,7 +165,7 @@ const shoes = [
     colors: 2,
     reviewsNum: 1,
     reviewsAvg: 4,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },       
  
   {
@@ -177,7 +177,7 @@ const shoes = [
     colors: 2,
     reviewsNum: 3,
     reviewsAvg: 4.5,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   }, 
 
   {
@@ -189,7 +189,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },      
  
   {
@@ -201,7 +201,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },      
  
   {
@@ -213,7 +213,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },      
  
   {
@@ -225,7 +225,7 @@ const shoes = [
     colors: 1,
     reviewsNum: 8,
     reviewsAvg: 2,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },      
  
   {
@@ -237,7 +237,7 @@ const shoes = [
     colors: 5,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },     
  
   {
@@ -249,7 +249,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },
 
   {
@@ -261,7 +261,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },  
  
   {
@@ -273,7 +273,7 @@ const shoes = [
     colors: 4,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },      
  
   {
@@ -285,7 +285,7 @@ const shoes = [
     colors: 6,
     reviewsNum: 1,
     reviewsAvg: 5,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },
 
   {
@@ -297,7 +297,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_athletic'
+    category: 'Basketball Shoe'
   },      
 
   // LIFESTYLE
@@ -311,7 +311,7 @@ const shoes = [
     colors: 12,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoeoee'
   },
 
   {
@@ -323,7 +323,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -335,7 +335,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -347,7 +347,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -359,7 +359,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -371,7 +371,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -383,7 +383,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -395,7 +395,7 @@ const shoes = [
     colors: 7,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -407,7 +407,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -419,7 +419,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -431,7 +431,7 @@ const shoes = [
     colors: 5,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -443,7 +443,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -455,7 +455,7 @@ const shoes = [
     colors: 7,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -467,7 +467,7 @@ const shoes = [
     colors: 4,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -479,7 +479,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -491,7 +491,7 @@ const shoes = [
     colors: 6,
     reviewsNum: 4,
     reviewsAvg: 4,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -503,7 +503,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -515,7 +515,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
  
   {
@@ -527,7 +527,7 @@ const shoes = [
     colors: 8,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
  
   {
@@ -539,7 +539,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -551,7 +551,7 @@ const shoes = [
     colors: 8,
     reviewsNum: 2,
     reviewsAvg: 4,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -563,7 +563,7 @@ const shoes = [
     colors: 1,
     reviewsNum: 9,
     reviewsAvg: 4,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -575,7 +575,7 @@ const shoes = [
     colors: 7,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -587,7 +587,7 @@ const shoes = [
     colors: 7,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   {
@@ -599,7 +599,7 @@ const shoes = [
     colors: 4,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'men_lifestyle'
+    category: 'Men\'s Shoe'
   },
 
   // WOMEN'S SHOES
@@ -615,7 +615,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -627,7 +627,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -639,7 +639,7 @@ const shoes = [
     colors: 1,
     reviewsNum: 19,
     reviewsAvg: 4,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -651,7 +651,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -663,7 +663,7 @@ const shoes = [
     colors: 5,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -675,7 +675,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -687,7 +687,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -699,7 +699,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -711,7 +711,7 @@ const shoes = [
     colors: 8,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -723,7 +723,7 @@ const shoes = [
     colors: 6,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -735,7 +735,7 @@ const shoes = [
     colors: 5,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
  
   {
@@ -747,7 +747,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -759,7 +759,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -771,7 +771,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -783,7 +783,7 @@ const shoes = [
     colors: 4,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -795,7 +795,7 @@ const shoes = [
     colors: 6,
     reviewsNum: 1,
     reviewsAvg: 5,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -807,7 +807,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
  
   {
@@ -819,7 +819,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -831,7 +831,7 @@ const shoes = [
     colors: 1,
     reviewsNum: 8,
     reviewsAvg: 5,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -843,7 +843,7 @@ const shoes = [
     colors: 2,
     reviewsNum: 5,
     reviewsAvg: 3,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
  
   {
@@ -855,7 +855,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -867,7 +867,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
 
   {
@@ -879,7 +879,7 @@ const shoes = [
     colors: 5,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
  
   {
@@ -891,7 +891,7 @@ const shoes = [
     colors: 5,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
  
   {
@@ -903,7 +903,7 @@ const shoes = [
     colors: 1,
     reviewsNum: 4,
     reviewsAvg: 5,
-    category: 'women_lifestyle'
+    category: 'Women\'s Shoe'
   },
   
   //ATHLETIC - RUNNING - women's running shoe
@@ -917,7 +917,7 @@ const shoes = [
     colors: 5,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -929,7 +929,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
  
   {
@@ -941,7 +941,7 @@ const shoes = [
     colors: 6,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -953,7 +953,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -965,7 +965,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -977,7 +977,7 @@ const shoes = [
     colors: 2,
     reviewsNum: 29,
     reviewsAvg: 4.5,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -989,7 +989,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1001,7 +1001,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1013,7 +1013,7 @@ const shoes = [
     colors: 14,
     reviewsNum: 9,
     reviewsAvg: 4,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1025,7 +1025,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1037,7 +1037,7 @@ const shoes = [
     colors: 10,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1049,7 +1049,7 @@ const shoes = [
     colors: 6,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
  
   {
@@ -1061,7 +1061,7 @@ const shoes = [
     colors: 1,
     reviewsNum: 4,
     reviewsAvg: 4,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1073,7 +1073,7 @@ const shoes = [
     colors: 7,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1085,7 +1085,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1097,7 +1097,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1109,7 +1109,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1121,7 +1121,7 @@ const shoes = [
     colors: 4,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1133,7 +1133,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1145,7 +1145,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1157,7 +1157,7 @@ const shoes = [
     colors: 7,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1169,7 +1169,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1181,7 +1181,7 @@ const shoes = [
     colors: 6,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1193,7 +1193,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
 
   {
@@ -1205,7 +1205,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'women_athletic'
+    category: 'Women\'s Running Shoe'
   },
   // KID'S SHOES
   // BOYS - Big Kids' Shoe
@@ -1219,7 +1219,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1231,7 +1231,7 @@ const shoes = [
     colors: 2,
     reviewsNum: 23,
     reviewsAvg: 4,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1243,7 +1243,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1255,7 +1255,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1267,7 +1267,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1279,7 +1279,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1291,7 +1291,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1303,7 +1303,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1315,7 +1315,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1327,7 +1327,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1339,7 +1339,7 @@ const shoes = [
     colors: 7,
     reviewsNum: 2,
     reviewsAvg: 3,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1351,7 +1351,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1363,7 +1363,7 @@ const shoes = [
     colors: 4,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1375,7 +1375,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1387,7 +1387,7 @@ const shoes = [
     colors: 10,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1399,7 +1399,7 @@ const shoes = [
     colors: 5,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1411,7 +1411,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1423,7 +1423,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1435,7 +1435,7 @@ const shoes = [
     colors: 1,
     reviewsNum: 29,
     reviewsAvg: 5,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1447,7 +1447,7 @@ const shoes = [
     colors: 12,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1459,7 +1459,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1471,7 +1471,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1483,7 +1483,7 @@ const shoes = [
     colors: 4,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1495,7 +1495,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1507,7 +1507,7 @@ const shoes = [
     colors: 5,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1519,7 +1519,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_boys'
+    category: 'Big Kids\' Shoe'
   },
 
   //GIRLS SHOES
@@ -1533,7 +1533,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
    
   {
@@ -1545,7 +1545,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },  
  
   {
@@ -1557,7 +1557,7 @@ const shoes = [
     colors: 4,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
    
   {
@@ -1569,7 +1569,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1581,7 +1581,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1593,7 +1593,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1605,7 +1605,7 @@ const shoes = [
     colors: 6,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1617,7 +1617,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1629,7 +1629,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1641,7 +1641,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1653,7 +1653,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1665,7 +1665,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1677,7 +1677,7 @@ const shoes = [
     colors: 5,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1689,7 +1689,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1701,7 +1701,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1713,7 +1713,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1725,7 +1725,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1737,7 +1737,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1749,7 +1749,7 @@ const shoes = [
     colors: 1,
     reviewsNum: 14,
     reviewsAvg: 5,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1761,7 +1761,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1773,7 +1773,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1785,7 +1785,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
 
   {
@@ -1797,7 +1797,7 @@ const shoes = [
     colors: 2,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1809,7 +1809,7 @@ const shoes = [
     colors: 1,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
  
   {
@@ -1821,7 +1821,7 @@ const shoes = [
     colors: 3,
     reviewsNum: null,
     reviewsAvg: null,
-    category: 'kids_girls'
+    category: 'Big Kids\' Shoe'
   },
 
 ];

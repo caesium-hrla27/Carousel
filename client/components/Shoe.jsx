@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Reviews from './Reviews.jsx';
+import Prices from './Prices.jsx';
 
 
-import { Li, Text, Color, ShoeDiv, Prices, OrigPrice } from './style.js';
+import { Li, Text, Color, ShoeDiv, CategoryDiv } from '../styles/Shoe.style.js';
 
 class Shoe extends Component {
   constructor(props) {
@@ -30,33 +31,36 @@ class Shoe extends Component {
   }
 
   render() {
-    
+
+    const { order } = this.props;
+    const { name, price, salePrice, shoeUrl, category, colors, reviewsNum, reviewsAvg } = this.props.data;
+      
+  
+
     return (
 
-      <Li id="li" order={this.props.order} onMouseEnter={() => this.handleMouseEnter(this.props.reviewsNum)} onMouseLeave={() => this.handleMouseLeave()}>
+      <Li id="li" order={order} onMouseEnter={() => this.handleMouseEnter(reviewsNum)} onMouseLeave={() => this.handleMouseLeave()}>
         
-        <img src={this.props.shoeUrl} /><br />
+        <img src={shoeUrl} /><br />
       
         <Text id="text">
 
           <ShoeDiv id="shoeText">
-            {this.props.reviewsNum && this.state.isHovering ? <Reviews reviewsNum={this.props.reviewsNum} reviewsAvg={this.props.reviewsAvg} /> : 
-              <Color>{this.props.colors} {this.props.colors === 1 ? 'Color' : 'Colors'}<br /></Color>} 
-            {this.props.name}<br />
+
+            {reviewsNum && this.state.isHovering ? <Reviews reviewsNum={reviewsNum} reviewsAvg={reviewsAvg} /> : 
+              <Color>{colors} {colors === 1 ? 'Color' : 'Colors'}</Color>} 
+            {name}
+
           </ShoeDiv>
           
-          {this.props.category === 'men_athletic' ? 'Basketball Shoe' : this.props.category === 'men_lifestyle' ? 'Men\'s Shoe' : 
-            this.props.category === 'women_athletic' ? 'Women\'s Running Shoe' : this.props.category === 'women_lifestyle' ? 'Women\'s Shoe' : 
-              this.props.category === 'kids_boys' || this.props.category === 'kids_girls' ? 'Big Kids\' Shoe' : null}<br />
-        
-          <Prices id="shoePrices">
-            <OrigPrice origPrice={this.props.price} salePrice={this.props.salePrice}>
-              {`$${this.props.price}`}
-            </OrigPrice>
-            {this.props.salePrice ? `$${this.props.salePrice}` : null}<br />
-          </Prices>
+          <CategoryDiv>
+            {category}
+          </CategoryDiv>
+
+          <Prices id="shoePrices" origPrice={price} salePrice={salePrice} />
 
         </Text>
+
       </Li>
 
     );

@@ -41,6 +41,8 @@ let getRecommendedShoes = (category) => {
 
 // save(shoeData.shoes);
 
+// drop the database
+
 module.exports = { 
   Shoe,
   save,
