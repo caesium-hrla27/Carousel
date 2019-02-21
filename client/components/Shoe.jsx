@@ -4,7 +4,7 @@ import Reviews from './Reviews.jsx';
 import Prices from './Prices.jsx';
 
 
-import { Li, Text, Color, ShoeDiv, CategoryDiv } from './style.js';
+import { Li, Text, Color, ShoeDiv, CategoryDiv } from '../styles/Shoe.style.js';
 
 class Shoe extends Component {
   constructor(props) {
@@ -46,20 +46,21 @@ class Shoe extends Component {
         <Text id="text">
 
           <ShoeDiv id="shoeText">
+
             {reviewsNum && this.state.isHovering ? <Reviews reviewsNum={reviewsNum} reviewsAvg={reviewsAvg} /> : 
-              <Color>{colors} {colors === 1 ? 'Color' : 'Colors'}<br /></Color>} 
-            {name}<br />
+              <Color>{colors} {colors === 1 ? 'Color' : 'Colors'}</Color>} 
+            {name}
+
           </ShoeDiv>
           
           <CategoryDiv>
-            {category === 'men_athletic' ? 'Basketball Shoe' : category === 'men_lifestyle' ? 'Men\'s Shoe' : 
-              category === 'women_athletic' ? 'Women\'s Running Shoe' : category === 'women_lifestyle' ? 'Women\'s Shoe' : 
-                category === 'kids_boys' || category === 'kids_girls' ? 'Big Kids\' Shoe' : null}<br />
+            {category}
           </CategoryDiv>
 
           <Prices id="shoePrices" origPrice={price} salePrice={salePrice} />
 
         </Text>
+
       </Li>
 
     );

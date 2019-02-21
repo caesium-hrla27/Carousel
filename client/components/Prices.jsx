@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { PricesDiv, OrigPrice } from './style.js';
+import { PricesDiv, OrigPrice } from '../styles/Prices.style.js';
 
 const Prices = (props) => {
 

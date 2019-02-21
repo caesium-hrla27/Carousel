@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-import { StylesDiv, StarRatingsTop, StarRatingsBottom } from './style.js';
+import { StylesDiv, StarRatingsTop, StarRatingsBottom } from '../styles/Reviews.style.js';
 
 const Reviews = (props) => {
 

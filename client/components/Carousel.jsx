@@ -6,14 +6,14 @@ import Shoe from './Shoe.jsx';
 import Indicator from './Indicator.jsx';
 import styled from 'styled-components';
 
-import { GlobalStyles, Wrapper, Ul, Img, ButtonLeft, ButtonRight } from './style.js';
+import { GlobalStyles, Wrapper, Ul, Img, ButtonLeft, ButtonRight } from '../styles/Carousel.style.js';
 
 class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
       recommendations: [],
-      categories: ['men_athletic', 'men_lifestyle', 'women_athletic', 'women_lifestyle', 'kids_boys', 'kids_girls'],
+      categories: ['Basketball Shoe', 'Men\'s Shoe', 'Women\'s Running Shoe', 'Women\'s Shoe', 'Big Kids\' Shoe'],
       position: 0,
       sliding: false,
       clickPosition: 0,
@@ -30,7 +30,7 @@ class Carousel extends Component {
   // when sending a get request, will need the category name I'm looking for, then send that category name to get shoes are matching that category name
   getRecommendations() {
     const {categories} = this.state;
-    const randIndex = Math.floor(Math.random() * 6);
+    const randIndex = Math.floor(Math.random() * 5);
     const category = categories[randIndex];
     
     axios
