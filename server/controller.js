@@ -6,9 +6,11 @@ const getRecommendedShoes = require('../database/model.js').getRecommendedShoes;
 module.exports = {
   get: (req, res) => {
     
-    const {id} = req.query;
+    const {category} = req.query;
 
-    getRecommendedShoes(id)
+    console.log('This is the category', category);
+
+    getRecommendedShoes(category)
       .then(shoes => {
         res.status(200).send(shoes);
       })
