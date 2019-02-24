@@ -1,21 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { PricesDiv, OrigPrice } from '../styles/Prices.style.js';
+import PricesStyles from '../styles/PricesStyles.css';
 
 const Prices = (props) => {
 
+  const OrigPrice = {
+    marginRight: '5px',
+    textDecoration: `${props.salePrice ? 'line-through': 'none'}`
+  }
+
+
   return (
     
-    <PricesDiv id="shoePrices">
+    <div className={PricesStyles.prices} id="shoePrices">
 
-      <OrigPrice origPrice={props.origPrice} salePrice={props.salePrice}>
+      <div style={OrigPrice}>
         {`$${props.origPrice}`}
-      </OrigPrice>
+      </div>
       
       {props.salePrice ? `$${props.salePrice}` : null}<br />
 
-    </PricesDiv>
+    </div>
 
   );
 };

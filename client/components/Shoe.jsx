@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import Reviews from './Reviews.jsx';
 import Prices from './Prices.jsx';
 
-
-import { Li, Text, Color, ShoeDiv, CategoryDiv } from '../styles/Shoe.style.js';
+import ShoeStyles from '../styles/ShoeStyles.css';
 
 class Shoe extends Component {
   constructor(props) {
@@ -34,34 +33,42 @@ class Shoe extends Component {
 
     const { order } = this.props;
     const { name, price, salePrice, shoeUrl, category, colors, reviewsNum, reviewsAvg } = this.props.data;
+
+    const shoeLi = {
+      flex: '1 0 30%',
+      marginRight: '20px',
+      order: `${order}`,
+      color: 'rgb(109, 109, 109)'
+    }
+
       
   
 
     return (
 
-      <Li id="li" order={order} onMouseEnter={() => this.handleMouseEnter(reviewsNum)} onMouseLeave={() => this.handleMouseLeave()}>
+      <li style={shoeLi} id="li" order={order} onMouseEnter={() => this.handleMouseEnter(reviewsNum)} onMouseLeave={() => this.handleMouseLeave()}>
         
         <img src={shoeUrl} /><br />
       
-        <Text id="text">
+        <div className={ShoeStyles.shoeText} id="text">
 
-          <ShoeDiv id="shoeText">
+          <div className={ShoeStyles.shoeDiv} id="shoeText">
 
             {reviewsNum && this.state.isHovering ? <Reviews reviewsNum={reviewsNum} reviewsAvg={reviewsAvg} /> : 
-              <Color>{colors} {colors === 1 ? 'Color' : 'Colors'}</Color>} 
+              <div className={ShoeStyles.colors}>{colors} {colors === 1 ? 'Color' : 'Colors'}</div>} 
             {name}
 
-          </ShoeDiv>
+          </div>
           
-          <CategoryDiv>
+          <div className={ShoeStyles.category}>
             {category}
-          </CategoryDiv>
+          </div>
 
           <Prices id="shoePrices" origPrice={price} salePrice={salePrice} />
 
-        </Text>
+        </div>
 
-      </Li>
+      </li>
 
     );
 

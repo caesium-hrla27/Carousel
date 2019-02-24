@@ -5,8 +5,8 @@ import Svg from './Svg.jsx';
 import Shoe from './Shoe.jsx';
 import Indicator from './Indicator.jsx';
 import styled from 'styled-components';
+import CarouselStyle from '../styles/CarouselStyle.css';
 
-import { GlobalStyles, Wrapper, Ul, Img, ButtonLeft, ButtonRight } from '../styles/Carousel.style.js';
 
 class Carousel extends Component {
   constructor(props) {
@@ -17,6 +17,7 @@ class Carousel extends Component {
       position: 0,
       sliding: false,
       clickPosition: 0,
+      direction: null
     };
     this.getOrder = this.getOrder.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
@@ -163,17 +164,34 @@ class Carousel extends Component {
   render() {
     
     const { sliding, direction, position, clickPosition, filteredRecs } = this.state;
+
+    const moveCarousel = () => {
+      if (!sliding) {
+        return 'translateX(calc(-30% - 20px))';
+      }
+      if (direction === 'prev') {
+        return 'translateX(calc(2 * -30% - 20px))';
+      }
+      return 'translateX(0%)';
+    }
+    
+    const carouselUl = {
+        listStyleType: 'none',
+        display: 'flex',
+        margin: '0 0 0 0',
+        padding: '0px 40px',
+        transition: `${sliding ? 'none' : 'transform 350ms ease-in-out 0s'}`,
+        transform: `${moveCarousel()}`
+    }
     
     return (
-      <Wrapper id="wrapper">
-        
-        <GlobalStyles />
-        
-        <Img>
+      <div className={CarouselStyle.carouselWrapper} id="wrapper">
+                
+        <div className={CarouselStyle.youMay}>
           <img src="https://s3.us-east-2.amazonaws.com/carousel-fec/youMay.png"></img>
-        </Img>
+        </div>
         
-        <Ul id="ul" sliding={sliding} direction={direction}>
+        <ul id="ul" style={carouselUl}>
           {this.state.filteredRecs.map((shoe, index) => {
             
             return <Shoe 
@@ -184,14 +202,14 @@ class Carousel extends Component {
           })
           
           }
-        </Ul>
+        </ul>
         
-        {position !== 9 ? <ButtonRight onClick={ () => this.nextSlide() }><Svg /></ButtonRight> : null}
-        {position !== 0 ? <ButtonLeft onClick={ () => this.prevSlide() }><Svg /></ButtonLeft> : null}
+        {position !== 9 ? <button className={CarouselStyle.buttonRight} onClick={ () => this.nextSlide() }><Svg /></button> : null}
+        {position !== 0 ? <button className={CarouselStyle.buttonLeft} onClick={ () => this.prevSlide() }><Svg /></button> : null}
         
         <Indicator clickPosition={clickPosition} />
       
-      </Wrapper>
+      </div>
     );
   }
 }

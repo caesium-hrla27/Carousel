@@ -1,0 +1,10 @@
+.carouselTrack {
+  position: relative;
+  width: 95%;
+  margin: 40px 30px 40px 30px;  
+  border-bottom: 2px solid rgba(109, 109, 109, 0.25);
+  z-index: 1;
+  border-radius: 2px;
+}
+
+
