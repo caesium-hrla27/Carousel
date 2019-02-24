@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import Reviews from './Reviews.jsx';
 import Prices from './Prices.jsx';
 
@@ -35,18 +34,13 @@ class Shoe extends Component {
     const { name, price, salePrice, shoeUrl, category, colors, reviewsNum, reviewsAvg } = this.props.data;
 
     const shoeLi = {
-      flex: '1 0 30%',
       marginRight: '20px',
-      order: `${order}`,
       color: 'rgb(109, 109, 109)'
-    }
-
-      
-  
+    };
 
     return (
 
-      <li style={shoeLi} id="li" order={order} onMouseEnter={() => this.handleMouseEnter(reviewsNum)} onMouseLeave={() => this.handleMouseLeave()}>
+      <li style={shoeLi} id="li" onMouseEnter={() => this.handleMouseEnter(reviewsNum)} onMouseLeave={() => this.handleMouseLeave()}>
         
         <img src={shoeUrl} /><br />
       
