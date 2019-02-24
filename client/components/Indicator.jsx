@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import IndicatorStyles from '../styles/IndicatorStyles.css';
 
