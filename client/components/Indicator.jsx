@@ -16,12 +16,12 @@ const Indicator = (props) => {
       props.clickPosition === 1 ? '111px' : props.clickPosition === 2 ? '222px' : props.clickPosition === 3 ? '333px' : 
         props.clickPosition === 4 ? '444px' : props.clickPosition === 5 ? '555px' : props.clickPosition === 6 ? '666px' : 
           props.clickPosition === 7 ? '777px' : props.clickPosition === 8 ? '890px' : props.clickPosition === 9 ? '1000px' : '0px'
-      }`
-  }
+    }`
+  };
   
 
   return (
-    <div id="indicator">
+    <div className={IndicatorStyles.indicatorWrapper} id="indicator">
       <div className={IndicatorStyles.carouselTrack}>
         <div style={carouselSlider}>
         </div>

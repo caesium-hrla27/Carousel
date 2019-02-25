@@ -62,6 +62,7 @@ class Carousel extends Component {
     let recsCopy = recommendations.slice(0);
     let randIndex;
     let recs = [];
+    
     while (recs.length < 12) {
       randIndex = Math.floor(Math.random() * recsCopy.length);
       recs.push(recsCopy[randIndex]);
@@ -123,23 +124,24 @@ class Carousel extends Component {
         <div className={CarouselStyle.youMay}>
           <img src="https://s3.us-east-2.amazonaws.com/carousel-fec/youMay.png"></img>
         </div>
-        
-        <ul id="ul" style={carouselUl}>
-          {this.state.filteredRecs.map((shoe, index) => {
+
+          <div className={CarouselStyle.carouselButtons}>
+            {position !== 0 ? <button className={CarouselStyle.buttonLeft} onClick={ () => this.prevSlide() }><Svg /></button> : null}
+            {position !== 9 ? <button className={CarouselStyle.buttonRight} onClick={ () => this.nextSlide() }><Svg /></button> : null}
+          </div>
+          
+          <ul id="ul" style={carouselUl}>
+            {this.state.filteredRecs.map((shoe, index) => {
             
-            return <Shoe 
-              key={index}
-              data={shoe}
-            />;
-          })
+              return <Shoe 
+                key={index}
+                data={shoe}
+              />;
+            })
           
-          }
-        </ul>
-          
-        <div style={{width: '100%'}}>
-          {position !== 0 ? <button className={CarouselStyle.buttonLeft} onClick={ () => this.prevSlide() }><Svg /></button> : null}
-          {position !== 9 ? <button className={CarouselStyle.buttonRight} onClick={ () => this.nextSlide() }><Svg /></button> : null}
-        </div>
+            }
+          </ul>
+
         
         <Indicator clickPosition={position} />
       
