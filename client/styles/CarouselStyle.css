@@ -1,6 +1,7 @@
 .carouselWrapper {
   width: 100%;
   overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .youMay {
@@ -24,7 +25,7 @@
   position: absolute;
   left:0px;
   margin-left:7px;
-  margin-top: 300px;
+  margin-top: 270px;
 
   -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
@@ -46,7 +47,7 @@
   position: absolute;
   right:0px;
   margin-right:7px;
-  margin-top: 300px;
+  margin-top: 270px;
   z-index: 10;
 }
 
