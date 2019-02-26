@@ -39,7 +39,11 @@ let getRecommendedShoes = (category) => {
   return Shoe.find({ category: category }).limit(25);
 };
 
+<<<<<<< HEAD
 //save(shoeData.shoes);
+=======
+save(shoeData.shoes);
+>>>>>>> 7af4ac6d91214347f5112b96f662aee45998045b
 
 // drop the database
 
